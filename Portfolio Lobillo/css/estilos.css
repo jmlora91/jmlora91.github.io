@@ -1,0 +1,430 @@
+    /* Reset y estilo base */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: lightgrey;
+        line-height: 1.6;
+    }
+
+    .img-redonda {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    /* Menú principal */
+    nav {
+        background-color: #333;
+        
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        position: relative;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+        background-color: #555;
+    }
+
+    nav ul li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #444;
+        min-width: 180px;
+        z-index: 999;
+        flex-direction: column;
+    }
+
+    nav ul li:hover>ul {
+        display: flex;
+    }
+
+    nav ul li ul li a {
+        padding: 12px 16px;
+    }
+
+    nav ul li ul li a:hover {
+        background-color: #666;
+    }
+
+    /* Contenedor principal (texto + imagen) */
+    .contenido-principal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    .contenido-principal .texto {
+        flex: 1;
+    }
+
+    .contenido-principal .texto h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .contenido-principal .texto p {
+        font-size: 1.1em;
+        color: #555;
+    }
+
+    .contenido-principal .imagen {
+        flex: 1;
+    }
+
+    .contenido-principal .imagen img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* Adaptación para pantallas pequeñas */
+    @media (max-width: 768px) {
+        .contenido-principal {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .contenido-principal .imagen {
+            margin-top: 20px;
+        }
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    /* Estilos generales y menú (idéntico al anterior) */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        line-height: 1.6;
+    }
+
+    nav {
+        background-color: #333;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    nav ul li {
+        position: relative;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+        background-color: #555;
+    }
+
+    nav ul li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        background-color: #444;
+        min-width: 180px;
+        z-index: 999;
+    }
+
+    nav ul li:hover>ul {
+        display: flex;
+    }
+
+    nav ul li ul li a {
+        padding: 12px 16px;
+        color: #fff;
+    }
+
+    nav ul li ul li a:hover {
+        background-color: #666;
+    }
+
+    @media (max-width: 600px) {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav ul li ul {
+            position: static;
+        }
+
+        #menu ul li {
+            width: 150px;
+        }
+    }
+
+    /* Contenedor principal */
+    main {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    /* Estilo de la lista en el contenido principal */
+    main ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main ul li {
+        background-color: #333;
+        margin: 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    main ul li a {
+        display: block;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    main ul li a:hover {
+        background-color: #555;
+    }
+
+    /* Estilo de cada entrada */
+    article {
+        background: white;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    article h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    article p {
+        color: #555;
+    }
+
+    .date {
+        font-size: 0.9em;
+        color: #999;
+        margin-bottom: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        /* Colapsa los bordes para que no haya espacio entre ellos */
+    }
+
+    th,
+    td {
+        padding: 10px;
+        /* Espaciado dentro de las celdas */
+        border: 1px solid black;
+        /* Borde interior */
+        text-align: left;
+        /* Alineación del texto */
+    }
+
+    /* Opcional: cambia el color del borde */
+    th {
+        background-color: #f2f2f2;
+        /* Color de fondo para las cabeceras */
+    }
+
+    td:hover {
+      transform: scale(1.1); /* Aumenta el tamaño */
+      background-color: #f0f8ff; /* Color de fondo al hacer hover */
+      z-index: 1;
+      position: relative;
+    }
+
+    /* Estilo para el menú flotante */
+    #menu {
+        position: fixed;
+        /* Fija la posición del menú */
+        top: 0;
+        /* En la parte superior */
+        left: 0;
+        width: 25%;
+        /* Abarca toda la anchura */
+        /*background-color: #333;*/
+        padding: 10px 0;
+        z-index: 999;
+        /* Para asegurarse de que quede sobre otros elementos */
+    }
+
+    #menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        /*display: flex; /* Para que los elementos estén en fila (horizontal) */
+        justify-content: center;
+        /* Centra los enlaces */
+    }
+
+    #menu ul li {
+        margin: 0 20px;
+        /* Espaciado entre los elementos */
+    }
+
+    #menu ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: #333;
+        text-align: center;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    #menu ul li a:hover {
+        background-color: #555;
+    }
+
+    /* Contenedor de la galería */
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    /* Miniaturas */
+    .gallery img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.1);
+        /* Efecto al pasar el ratón */
+    }
+
+    /* Modal para la imagen ampliada */
+    .modal {
+        display: none;
+        /* Por defecto, está oculto */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+    }
+
+    /* Botón de cerrar */
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 30px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .imagen-centrada {
+        display: block;
+        margin: 0 auto;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    article {
+        background: white;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .esperanza {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.5em;
+  color: #333; /* Puedes personalizar el color */
+}
+
+footer {
+    font-family: 'Patrick Hand', cursive;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 15px;
+  font-size: 0.9em;
+  bottom: 0;
+  width: 100%;
+    position: fixed;
+  z-index: 1000;
+}
+
+  .video-centro {
+    display: block;
+    margin: 30px auto;
+    max-width: 100%;
+    width: 60%;
+    height: 312px;
+  }
