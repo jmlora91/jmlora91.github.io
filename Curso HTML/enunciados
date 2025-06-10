@@ -1,0 +1,433 @@
+
+Título:	Actividad 1_Caso práctico
+Fecha límite:	06/06/2026
+Módulo formativo:
+Construcción de páginas web (MF0950_2)
+Unidad formativa:
+Creación de páginas web con el lenguaje de marcas (UF1302)
+Unidad didáctica:
+Unidad Didáctica 1. Los lenguajes de marcas
+
+Tarea:
+INSTALAR UN EDITOR DE TEXTO
+
+
+
+
+
+ENUNCIADO (DESCRIPCIÓN)
+
+Los sistemas operativos suelen incluir un editor de texto básico. Por ejemplo Windows incluye el Bloc de Notas (Notepad) y Linux dependiendo de la distribución puede incorporar el editor Vi, Kate o Gedit. Existen otros editores de texto con más funcionalidades y opciones de personalización para facilitar la tarea de un desarrollador. Algunos editores utilizados en desarrollo web son:
+
+
+Notepad++: http://notepad-plus-plus.org/
+Sublimetext: http://www.sublimetext.com/
+NetBeans: https://netbeans.org/
+Eclipse: http://www.eclipse.org/
+
+
+PREGUNTAS/ACTIVIDADES A REALIZAR
+
+
+Utiliza el editor de texto del que disponga tu sistema operativo y crea un documento de texto con la estructura básica de una página web html5.
+Guarda el archivo con el nombre “web” y extensión “.html”. Guárdalo usando codificación UTF8.
+Identifique en el archivo html cada una de las secciones que lo forman explicando el uso que tienen las etiquetas que aparecen.
+Utiliza al menos otros 2 editores de texto distintos al que traía tu equipo. Abre el archivo creado anteriormente con los nuevos editores de texto.
+
+
+INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD
+
+Es importante descargar la versión del editor de texto que corresponda a nuestro sistema operativo, versión adecuada de Windows, Linux o Mac, 32 o 64 bits, etc.
+
+Normalmente las versiones de los programas son instalables pero hay otra opción que se denomina versiones “portables”. Estas versiones simplemente se descargan en nuestro equipo y se ejecutan sin necesidad de instalarlas. Es una ventaja en caso de trabajar en equipos que no son nuestros y no tenemos permisos para instalar aplicaciones.
+
+Los procesadores de texto como OpenOffice, LibreOffice o Microsoft Word no sirven para desarrollar webs, hay que utilizar un editor de texto plano.
+-----------------------------------
+ENUNCIADO (DESCRIPCIÓN)
+
+Al desarrollar una página web es importante comprobar la visualización y su funcionamiento con varios navegadores. Es importante conocer los distintos navegadores disponibles y sobre todo los que más utiliza la gente. Hoy en día un gran porcentaje de visitas llega desde dispositivos móviles, así que es importante incluso probar las páginas web en smartphones y tablets.
+
+
+
+
+PREGUNTAS/ACTIVIDADES A REALIZAR
+
+
+1. Investiga cuáles son los navegadores más utilizados actualmente en todo el mundo. Muestra una gráfica o los porcentajes de los más utilizados.
+
+2. Indica la dirección de la página web oficial de los siguientes navegadores. Instala en tu equipo al menos 3 de ellos:
+· Internet Explorer.
+
+· Firefox.
+
+· Chrome.
+
+· Opera.
+
+· Safari.
+
+
+3. Visualice una misma página web en cada uno de los navegadores instalados y compruebe si se ve igual y correctamente en cada uno de ellos. ¿Es igual utilizar un navegador u otro? ¿Se verán las páginas web siempre igual aunque sean navegadores diferentes?
+
+4. Si se accede a una página web desde un ordenador y un dispositivo móvil (Smartphone o tablet). ¿Funcionará igual la página desde un dispositivo móvil? ¿Se ve igual que desde un navegador de escritorio?
+
+
+
+INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD
+
+Los navegadores web son gratuitos. Para su descarga conviene siempre acudir a su página oficial para evitar problemas de software malicioso.
+
+Existen páginas web con estadísticas y estudios sobre los sistemas operativos y los navegadores más utilizados en el mundo y por regiones.
+-------------------------------------
+USO DE ETIQUETAS PARA DAR FORMATO AL DOCUMENTO
+
+
+
+
+
+PREGUNTAS/ACTIVIDADES A REALIZAR
+
+
+1. Realice una página web donde aparezca un encabezado que diga “Ejemplos de formatos de texto”. Antes de cada párrafo debe aparecer un título de segundo nivel que diga “Ejemplo 1, Ejemplo 2, Ejemplo 3, …”. A continuación se debe mostrar el uso de los siguientes formatos de texto, cada uno en un párrafo diferente:
+Texto normal.
+Texto en negrita.
+Texto en cursiva.
+Texto subrayado.
+Texto tachado.
+
+
+
+
+2. Utilice etiquetas de párrafo para escribir el siguiente texto. El primer párrafo tiene una línea tras un punto y aparte que pertenece al mismo párrafo. A continuación hay una línea horizontal y debajo de la línea un nuevo párrafo. El primer párrafo tiene alineación justificada y el segundo alineación a la derecha. Debe quedar algo así:
+
+
+
+INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD
+
+Aunque siempre es preferible utilizar CSS para dar formato al texto en este ejercicio se trata de utilizar etiquetas y atributos html sin hacer uso de CSS.
+
+
+----------------------------------------
+RESOLUCIÓN DE FÓRMULAS EN UNA WEB
+
+
+
+
+
+PREGUNTAS/ACTIVIDADES A REALIZAR
+
+
+1. Realice una página web donde se muestre la fórmula para la resolución de ecuaciones de segundo grado (en color rojo) y la fórmula química del agua (en color azul). Para escribir las fórmulas hay que utilizar las etiquetas correspondientes para superíndices y subíndices. El fondo de la página debe ser de color gris. Introduzca un comentario al final de la página que ponga “Este texto es un comentario y no se visualizará en el navegador”.
+
+
+
+
+INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD
+
+Aunque siempre es preferible utilizar CSS para dar formato al texto en este ejercicio se trata de utilizar etiquetas y atributos html sin hacer uso de CSS.
+
+
+----------------------------------------
+ENCABEZADO “TEXTO PREFORMATEADO”
+
+
+
+
+
+PREGUNTAS/ACTIVIDADES A REALIZAR
+
+
+1. Desarrolle una página web que tenga un encabezado de nivel 1 que ponga “Texto preformateado”. Debe aparecer la primera línea pegada a la izquierda y la segunda con una tabulación. La tercera línea incluye varios espacios en blanco consecutivos de forma que aparezcan los números del 1 al 6 separados por espacios en blanco, de forma que entre el 1 y el 2 haya un único espacio, entre el 2 y el 3 dos espacios, entre el 3 y el 4 tres espacios, y así sucesivamente hasta el 6.
+
+Debajo se pondrá un encabezado de nivel 2 que ponga “Poema de Gustavo Adolfo Bécquer”, y a continuación un poema de Bécquer que debe mantener su formato asegurando los saltos de línea en los lugares apropiados
+
+Hoy la tierra y los cielos me sonríen,
+hoy llega al fondo de mi alma el sol,
+
+hoy la he visto..., la he visto y me ha mirado...,
+
+¡hoy creo en Dios!
+
+
+
+Establecer el tamaño de letra del poema a4 y color verde. Especifique la fuente Arial y en caso de no estar disponible que se use Courier.
+
+
+
+INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD
+
+Aunque siempre es preferible utilizar CSS para dar formato al texto en este ejercicio se trata de utilizar etiquetas y atributos html sin hacer uso de CSS.
+
+----------------------------------------------------
+USO DE LISTAS Y TABLAS
+
+
+
+
+
+
+ENUNCIADO (DESCRIPCIÓN)
+
+Cuando se desarrolla una página web es importante tener en cuenta que la información presentada esté ordenada para facilitar su comprensión. Existen algunos recursos que facilitan la presentación de la información dentro de una página web. Para este fin se pueden usar las tablas y las listas.
+
+
+
+PREGUNTAS/ACTIVIDADES A REALIZAR
+
+
+1. Realice una página web donde aparezcan distintos tipos de listas.
+a. Una lista no ordenada, listando los colores que componen el sistema RGB (rojo, verde y azul).
+
+b. Una lista ordenada, mostrando los meses del año.
+
+c. Una lista de definición, mostrando los días de la semana en inglés con su traducción en español.
+
+2. Realice una página web donde aparezca una lista ordenada con distintos tipos de alimentos (verduras, frutas y pescados). De forma anidada debajo de cada elemento de la lista ordenada se deben insertar tres ejemplos de dicho alimento en forma de lista no ordenada.
+
+
+INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD
+
+Es aspecto que debe tener la página web de la actividad 1 debe ser algo similar a esto:
+
+
+
+
+
+El resultado de la página web de la actividad 2 debe ser algo como lo siguiente:
+
+
+
+-----------------------------------------------------------
+HORARIOS Y NOTAS DE ALUMNOS EN TABLA
+
+
+
+
+
+PREGUNTAS/ACTIVIDADES A REALIZAR
+
+
+1. Confeccione una página web que contenga una tabla con los horarios de clase de alumnos de informática. Hay 4 horas de clase al día de lunes a viernes.
+
+2. Confeccione una página web que contenga una tabla.
+a. La tabla debe ser de 2 columnas. La primera contendrá los nombres de las asignaturas de un alumno, la segunda columna contendrá sus notas.
+
+b. Introduzca un encabezado a la tabla que ponga “Asignatura” en la primera columna y “Nota” en la segunda. Cree también un título de tabla que ponga “Calificaciones finales”.
+
+c. Introduzca un pie de tabla donde se indique la nota media final del alumno. La primera columna pondrá “Nota media”, y la segunda la nota media teniendo en cuenta cada una de las notas de las asignaturas.
+
+
+
+
+INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD
+
+El aspecto de la actividad 1 debe ser algo así:
+
+
+
+
+
+El aspecto de la actividad 2 debe quedar algo así:
+
+-----------------------------------------------------
+TABLA CON CELDA EXPANDIDA
+
+
+
+
+
+PREGUNTAS/ACTIVIDADES A REALIZAR
+
+
+1. Cree una página web que contenga una tabla con la siguiente distribución de celdas:
+
+-----------------------------------------------------
+ENLACES Y DIRECCIONAMIENTOS
+
+
+
+
+
+
+ENUNCIADO (DESCRIPCIÓN)
+
+Los enlaces o hipervínculos son la parte fundamental de la Web. El uso de los enlaces facilita la interacción y permite dar saltos dentro de una página o de una página web a otra.
+
+
+
+
+PREGUNTAS/ACTIVIDADES A REALIZAR
+
+
+1. Cree una página web llamada principal.html que contenga distintos tipos de enlaces.
+a. Un enlace dirigirá a la página de Googleusando dirección absoluta, la página del enlace se abrirá en una nueva ventana.
+
+b. Inserte una o varias noticias, que tengan varios párrafos, copiadas de alguna página de internet. Incluya al final de la noticia un enlace a la dirección de la fuente original de forma que si se pulsa el enlace se abra en una nueva ventana la noticia en su web original.
+
+c. Inserte un enlace interno que lleve al principio de la página.
+
+d. Inserte un enlace interno que lleve al final de la página.
+
+e. Inserte un enlace que lleve a un archivo de imagen.
+
+f. Inserte un enlace que lleve a otra página web usando dirección relativa. La nueva página se creará en la misma carpeta y se la llamará “contacto.html”. Se desea que se abra en la misma ventana.
+
+2. En la página web llamada contacto.html
+a. Se quiere que la página creada anteriormente y ésta estén vinculadas. Para eso incluya un enlace que diga “Volver a la página principal” que lleve a la página principal.html y se abrirá en la misma ventana.
+
+b. Incluya un enlace que permita descargar el CV que está en un archivo pdf y que se abra en una nueva ventana.
+
+c. Incluya un enlace con una dirección de correo electrónico que será “info@trabajador007.com”. El propio enlace debe ser la imagen de un sobre, un buzón, una arroba o algo similar.
+
+d. Se desea que al pulsar el enlace de correo electrónico se envíe un mensaje a la dirección del enlace, con copia a la dirección supervisor@trabajador007.com. Además en el asunto del mensaje debe poner por defecto “Pedir información”.
+
+
+
+INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD
+
+Se trata de utilizar distintos tipos de enlaces así como del uso de algunos de sus atributos.
+-------------------------------------------
+USO DE MARCOS Y CAPAS
+
+
+
+
+
+ENUNCIADO (DESCRIPCIÓN)
+
+
+
+
+
+
+
+Las páginas web que están hechas con frames se componen de una declaración de los marcos y tantas páginas en formato HTML corriente como distintas divisiones hemos definido.
+
+Los frames o marcos es una técnica que se utiliza para subdividir la pantalla del visualizador en diferentes ventanas, con la característica de que cada una de ellas se podrá manipular por separado, es como si cada uno de los marcos o frames fuera una página Web. Son muy útiles para, por ejemplo, mostrar permanentemente los diferentes contenidos de nuestra página y, en la otra mostrar contenido seleccionado.
+
+Recordemos para definir las diferentes subventanas o frames se utilizan las etiquetas:
+
+<FRAMESET></FRAMESET> Y <FRAME>
+
+Con la etiqueta <FRAMSET> indicamos las particiones de la ventana del navegador, estas particiones pueden ser en filas o columnas
+
+Con la marca <FRAME> indicamos las propiedades de cada partición y donde colocaremos
+
+Hay que tener en cuenta que para aquellos navegadores que no soporten la versión HTML que hayamos utilizado no verán los contenidos de los frames creados, para ello se utiliza la etiqueta <NOFRAMES>…</NOFRAMES> que permite visualizar todo lo que se escriba entra ellas.
+
+Por ultimo recordar que para crear la barra de desplazamiento, se hace a través del atributo “scrolling”, donde el valor “yes” muestra siempre la barra, el valor “no” no mostrara la barra nunca (es decir, la parte de frame que no quepa en la pantalla no la veremos) y, por último, el valor “auto” la mostrara sólo en caso de que sea necesario.
+
+
+
+
+
+PREGUNTAS/ACTIVIDADES A REALIZAR
+
+
+
+
+
+
+1. Pregunta 1. Desarrolla una página web utilizando frames.
+
+a. La estructura de la página será de 2 marcos superiores separados verticalmente y un marco en la parte inferior con barra de desplazamiento siempre activa. Los marcos superiores tendrán 200px de alto y ocupará el 50% del ancho cada uno. Elmarco inferior ocupará el resto de la página. Los marcos superiores mostrarán las páginas frame1.html y frame2.html, y el marco inferior la página frame3.html. Estos 3 archivos hay que crearlos.
+
+b. Se quiere que los marcos no se puedan cambiar de tamaño.
+
+c. El marco superior izquierdo contendrá una lista con 3 enlaces y al pulsarlos se mostrará el contenido en el marco inferior.
+
+
+
+
+
+
+
+
+INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD
+
+
+
+
+
+Algunas páginas web como la de Google o la da Yahoo no permiten que se utilicen dentro de un marco.La estructura que se quiere conseguir con los marcos en el ejercicio 1 es la siguiente:
+
+
+
+
+
+Frame1
+
+Frame2
+
+Frame3
+
+
+---------------------------------------------------------
+USO DE MARCOS Y CAPAS II
+
+
+
+
+
+ENUNCIADO (DESCRIPCIÓN)
+
+La utilización de marcos está en desuso por los problemas que causa tanto a personas con discapacidad como actualmente para la navegación en dispositivos móviles. Aun así pueden ser útiles en determinados casos donde las especificaciones lo requieran.
+
+Actualmente lo más utilizado para realizar la estructura de la página son las capas, que además permiten agrupar reglas de estilo.
+
+
+
+
+PREGUNTAS/ACTIVIDADES A REALIZAR
+
+
+1. Desarrolle una página web utilizando capas.
+a. La estructura de la página constará de una cabecera en la parte superior que ocupa todo el ancho. La parte central constará de 2 capas dividiendo el ancho en partes iguales. Y abajo del todo habrá otra capa que será el pie de página.
+
+b. Se pondrá un color de fondo distinto a cada una de las 4 capas para poder distinguirlas fácilmente. En la capa del título aparecerá un encabezado con el texto “Página estructurada con capas”. Y en el pie un texto que diga “Pie de página”.
+
+c. La capa central izquierda contendrá una lista con el nombre de 5 colores. La fuente de cada elemento de la lista tendrá el color de su nombre y de tamaño 18px.
+
+
+
+
+INFORMACIÓN ADICIONAL/ORIENTACIONES PARA DESARROLLAR LA ACTIVIDAD
+
+Será necesario utilizar etiquetas “div” y “span” así como el atributo “style” para establecer los estilos necesarios. La estructura que se quiere conseguir en el ejercicio 2 utilizando capas es la siguiente:
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------
+MAPA WEB
+
+
+
+
+
+
+ENUNCIADO (DESCRIPCIÓN)
+
+Al realizar un proyecto con lenguaje HTML (Lenguaje de Marcas) a veces es interesante realizar un esquema visual que nos indique las relaciones entre los distintos elementos de nuestro sitio.
+
+
+
+Un buen ejemplo de ello es el mapa web. Es importante agregar dicho mapa web e incluirlo para facilitar la búsqueda de contenido en nuestro sitio web. Para este caso práctico vamos a utilizar una estructura simple en la cual hagamos hincapié en los archivos diferenciados y los enlaces que nos llevarán a los diferentes archivos html.
+
+
+
+
+PREGUNTAS/ACTIVIDADES A REALIZAR
+
+Pregunta 1. Crear una estructura de páginas similar a la del sitio web.
+
+Pregunta 2. Enlazar cada una de las páginas con los elementos que se relacionan. Teniendo en cuenta la bidireccionalidad de las flechas coloreadas de azul y las unidireccionales que coloreadas de rojo.
