@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Actividades de HTML</title>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+  <style>
+:root {
+  --bg-color: #fefefe;
+  --text-color: #1c1c1e;
+  --card-bg: #ffffff;
+  --menu-bg: #f2f2f7;
+  --menu-text: #1c1c1e;
+  --menu-link: #007aff;
+  --menu-link-hover: #004fbf;
+  --resultado-bg: #f5f5f5;
+}
+
+body.dark {
+  --bg-color: #000000;
+  --text-color: #f2f2f7;
+  --card-bg: #1c1c1e;
+  --menu-bg: #121212;
+  --menu-text: #f2f2f7;
+  --menu-link: #0a84ff;
+  --menu-link-hover: #66aaff;
+  --resultado-bg: #2c2c2e;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Menú lateral estilo limpio */
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 240px;
+  height: 100vh;
+  background: var(--menu-bg);
+  color: var(--menu-text);
+  padding: 1.5rem;
+  box-shadow: -2px 0 12px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  border-left: 1px solid rgba(0,0,0,0.05);
+}
+
+.menu h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.menu input {
+  background: #e5e5ea;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 12px;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.menu input:focus {
+  outline: 2px solid #007aff;
+}
+
+.menu a {
+  display: block;
+  margin: 0.4rem 0;
+  color: var(--menu-link);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  background-color: rgba(0,122,255,0.1);
+  color: var(--menu-link-hover);
+}
+
+/* Contenido */
+.contenido {
+  flex: 1;
+  margin-right: 260px;
+  padding: 2rem;
+}
+
+.actividad {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: background 0.3s ease;
+}
+
+.resultado {
+  padding: 1rem;
+  background: var(--resultado-bg);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Switch estilo iPhone */
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 3rem auto;
+}
+
+.switch-label {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: background-color 0.3s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: transform 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+input:checked + .slider {
+  background-color: #34c759;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="contenido">
+    <h1>Mis Actividades del Curso de HTML</h1>
+
+    <div class="actividad" id="actividad1">
+      <h2>Actividad 1:</h2>
+
+      <h3>📝 Enunciado</h3>
+      <p>Crea un encabezado de nivel 1 con el texto "Hola Mundo" y un párrafo que diga "Estoy aprendiendo HTML".</p>
+
+      <h3>✅ Resultado</h3>
+      <div class="resultado">
+        <h1>Hola Mundo</h1>
+        <p>Estoy aprendiendo HTML</p>
+      </div>
+
+      <h3>💻 Código</h3>
+      <pre><code class="language-html">
+&lt;h1&gt;Hola Mundo&lt;/h1&gt;
+&lt;p&gt;Estoy aprendiendo HTML&lt;/p&gt;
+      </code></pre>
+    </div>
+
+    <!-- Switch de modo claro/oscuro -->
+    <span class="switch-label" id="modoTexto">Modo oscuro</span>
+    <label class="switch">
+      <input type="checkbox" id="modoSwitch" onchange="toggleModo()">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+<div class="menu">
+  <h2>Ejercicios</h2>
+
+  <!-- Filtro de búsqueda -->
+  <input type="text" id="filtro-menu" placeholder="Buscar actividad..." onkeyup="filtrarTodo()" style="width: 100%; padding: 6px; margin-bottom: 1rem; border-radius: 4px; border: none; outline: none;">
+
+  <!-- Enlaces del menú -->
+  <div id="lista-actividades">
+    <a href="#actividad1">Actividad 1</a>
+    <a href="#actividad2">Actividad 2</a>
+    <!-- Agrega más enlaces según tus ejercicios -->
+  </div>
+</div>
+
+ <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-html.min.js"></script>
+<script>
+  function toggleModo() {
+    document.body.classList.toggle('dark');
+    const switchTexto = document.getElementById('modoTexto');
+    const modoActivo = document.body.classList.contains('dark');
+
+    // Actualiza el texto para mostrar el modo al que se va a cambiar
+    switchTexto.textContent = modoActivo ? 'Modo claro' : 'Modo oscuro';
+
+    // Sincroniza el checkbox si se cambia por código
+    document.getElementById('modoSwitch').checked = modoActivo;
+  }
+
+  function filtrarTodo() {
+    const input = document.getElementById('filtro-menu');
+    const filtro = input.value.toLowerCase();
+
+    // Filtrar enlaces del menú
+    const enlaces = document.querySelectorAll('#lista-actividades a');
+    enlaces.forEach(enlace => {
+      const texto = enlace.textContent.toLowerCase();
+      enlace.style.display = texto.includes(filtro) ? 'block' : 'none';
+    });
+
+    // Filtrar actividades en el contenido
+    const actividades = document.querySelectorAll('.actividad');
+    actividades.forEach(actividad => {
+      const textoActividad = actividad.innerText.toLowerCase();
+      actividad.style.display = textoActividad.includes(filtro) ? 'block' : 'none';
+    });
+  }
+
+  // Configura el texto del switch al cargar
+  window.addEventListener('DOMContentLoaded', () => {
+    const modoActivo = document.body.classList.contains('dark');
+    document.getElementById('modoTexto').textContent = modoActivo ? 'Modo claro' : 'Modo oscuro';
+    document.getElementById('modoSwitch').checked = modoActivo;
+  });
+</script>
+
+</body>
+</html>

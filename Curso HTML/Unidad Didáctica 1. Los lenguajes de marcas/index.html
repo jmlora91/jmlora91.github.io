@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividades de HTML</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-color: #fefefe;
+        --text-color: #1c1c1e;
+        --card-bg: #ffffff;
+        --menu-bg: #f2f2f7;
+        --menu-text: #1c1c1e;
+        --menu-link: #007aff;
+        --menu-link-hover: #004fbf;
+        --resultado-bg: #f5f5f5;
+      }
+
+      body.dark {
+        --bg-color: #000000;
+        --text-color: #f2f2f7;
+        --card-bg: #1c1c1e;
+        --menu-bg: #121212;
+        --menu-text: #f2f2f7;
+        --menu-link: #0a84ff;
+        --menu-link-hover: #66aaff;
+        --resultado-bg: #2c2c2e;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background 0.4s ease, color 0.4s ease;
+      }
+
+      /* Menú lateral estilo limpio */
+      .menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 240px;
+        height: 100vh;
+        background: var(--menu-bg);
+        color: var(--menu-text);
+        padding: 1.5rem;
+        box-shadow: -2px 0 12px rgba(0, 0, 0, 0.05);
+        overflow-y: auto;
+        border-left: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .menu h2 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+
+      .menu input {
+        background: #e5e5ea;
+        border: none;
+        border-radius: 12px;
+        padding: 8px 12px;
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 1.5rem;
+        color: #333;
+      }
+
+      .menu input:focus {
+        outline: 2px solid #007aff;
+      }
+
+      .menu a {
+        display: block;
+        margin: 0.4rem 0;
+        color: var(--menu-link);
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 4px 8px;
+        border-radius: 6px;
+      }
+
+      .menu a:hover {
+        background-color: rgba(0, 122, 255, 0.1);
+        color: var(--menu-link-hover);
+      }
+
+      /* Contenido */
+      .contenido {
+        flex: 1;
+        margin-right: 260px;
+        padding: 2rem;
+      }
+
+      .actividad {
+        background: var(--card-bg);
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: background 0.3s ease;
+      }
+
+      .resultado {
+        padding: 1rem;
+        background: var(--resultado-bg);
+        border-radius: 10px;
+        margin-bottom: 1rem;
+      }
+
+      /* Switch estilo iPhone */
+      .switch-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 3rem auto;
+      }
+
+      .switch-label {
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 52px;
+        height: 30px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: background-color 0.3s;
+        border-radius: 34px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 22px;
+        width: 22px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: transform 0.3s;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      input:checked + .slider {
+        background-color: #34c759;
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(22px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenido">
+      <h1>Unidad Didáctica 1. Los lenguajes de marcas</h1>
+
+      <div class="actividad" id="actividad1">
+        <h2>Actividad 1:</h2>
+
+        <h3>📝 INSTALAR UN EDITOR DE TEXTO</h3>
+        <p>
+          Utiliza el editor de texto del que disponga tu sistema operativo y crea un documento de texto con la estructura básica de una página web html5.
+Guarda el archivo con el nombre “web” y extensión “.html”. Guárdalo usando codificación UTF8.
+Identifique en el archivo html cada una de las secciones que lo forman explicando el uso que tienen las etiquetas que aparecen.
+Utiliza al menos otros 2 editores de texto distintos al que traía tu equipo. Abre el archivo creado anteriormente con los nuevos editores de texto.
+        </p>
+
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <h1>Hola Mundo</h1>
+          <p>Estoy aprendiendo HTML</p>
+        </div>
+
+        <h3>💻 Código</h3>
+        <pre>
+          <code class="language-html">
+            &lt;!DOCTYPE html&gt;
+            &lt;!-- Esta línea declara que el documento es HTML5 --&gt;
+            &lt;html lang="es"&gt;
+            &lt;!-- La etiqueta &lt;html&gt; es la raíz de todo el documento HTML --&gt;
+
+            &lt;head&gt;
+                &lt;!-- La sección &lt;head&gt; contiene metadatos e información para el navegador --&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;!-- Define la codificación de caracteres como UTF-8 para soportar caracteres especiales --&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;!-- Hace que la web sea adaptable a diferentes tamaños de pantalla (responsive) --&gt;
+                &lt;title&gt;Mi Página Web&lt;/title&gt;
+                &lt;!-- Título que aparecerá en la pestaña del navegador --&gt;
+            &lt;/head&gt;
+
+            &lt;body&gt;
+                &lt;!-- La etiqueta &lt;body&gt; contiene todo el contenido visible de la página web --&gt;
+
+                &lt;header&gt;
+                    &lt;!-- La sección &lt;header&gt; generalmente contiene el título principal o el menú de navegación --&gt;
+                    &lt;h1&gt;Bienvenido a Mi Página Web&lt;/h1&gt;
+                &lt;/header&gt;
+
+                &lt;nav&gt;
+                    &lt;!-- La etiqueta &lt;nav&gt; contiene enlaces de navegación --&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Acerca de&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/nav&gt;
+
+                &lt;main&gt;
+                    &lt;!-- La etiqueta &lt;main&gt; contiene el contenido principal de la página --&gt;
+                    &lt;section&gt;
+                        &lt;!-- &lt;section&gt; agrupa contenido relacionado --&gt;
+                        &lt;h2&gt;Sobre Nosotros&lt;/h2&gt;
+                        &lt;p&gt;Esta es una página de ejemplo creada para demostrar la estructura básica de HTML5.&lt;/p&gt;
+                    &lt;/section&gt;
+
+                    &lt;article&gt;
+                        &lt;!-- &lt;article&gt; representa contenido independiente, como un post o noticia --&gt;
+                        &lt;h2&gt;Artículo Destacado&lt;/h2&gt;
+                        &lt;p&gt;Este es un artículo destacado dentro de nuestra página web.&lt;/p&gt;
+                    &lt;/article&gt;
+                &lt;/main&gt;
+
+                &lt;aside&gt;
+                    &lt;!-- &lt;aside&gt; contiene información complementaria, como anuncios o enlaces secundarios --&gt;
+                    &lt;h3&gt;Noticias Relacionadas&lt;/h3&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Noticia 1&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Noticia 2&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/aside&gt;
+
+                &lt;footer&gt;
+                    &lt;!-- &lt;footer&gt; contiene información del pie de página como derechos de autor --&gt;
+                    &lt;p&gt;&copy; 2025 Mi Página Web. Todos los derechos reservados.&lt;/p&gt;
+                &lt;/footer&gt;
+
+            &lt;/body&gt;
+
+            &lt;/html&gt;
+
+          </code>
+        </pre>
+      </div>
+
+      <div class="actividad" id="actividad2">
+        <h2>Actividad 2:</h2>
+
+        <h3>📝 Al desarrollar una página web es importante comprobar la visualización y su funcionamiento con varios navegadores. Es importante conocer los distintos navegadores disponibles y sobre todo los que más utiliza la gente. Hoy en día un gran porcentaje de visitas llega desde dispositivos móviles, así que es importante incluso probar las páginas web en smartphones y tablets.</h3>
+        <p>1. Investiga cuáles son los navegadores más utilizados actualmente en todo el mundo. Muestra una gráfica o los porcentajes de los más utilizados. </p>
+
+          <p>2. Indica la dirección de la página web oficial de los siguientes navegadores. Instala en tu equipo al menos 3 de ellos:
+          <ul>
+            <li>Internet Explorer.</li>
+            <li>Firefox.</li>
+            <li>Chrome.</li>
+            <li>Opera.</li>
+            <li>Safari.</li>
+          </ul>
+        </p>
+          
+          <p>3. Visualice una misma página web en cada uno de los navegadores instalados y compruebe si se ve igual y correctamente en cada uno de ellos. ¿Es igual utilizar un navegador u otro? ¿Se verán las páginas web siempre igual aunque sean navegadores diferentes?</p>
+          <p>4. Si se accede a una página web desde un ordenador y un dispositivo móvil (Smartphone o tablet). ¿Funcionará igual la página desde un dispositivo móvil? ¿Se ve igual que desde un navegador de escritorio?</p>
+        
+
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <h1>1. Investiga cuáles son los navegadores más utilizados actualmente en todo el mundo. Muestra una gráfica o los porcentajes de los más utilizados. </h1>
+          <p>
+            Según datos actualizados de diversas fuentes:
+
+<ul>
+<li>Google Chrome: entre 66 % y 67 % de cuota global</li> 
+<li>Apple Safari: entre 17 % y 19 %</li> 
+<li>Microsoft Edge: alrededor de 5 %</li>
+<li>Mozilla Firefox: cerca del 2–3 %</li> 
+<li>Samsung Internet y Opera: cada uno aproximadamente un 2 %</li> 
+</ul>
+</p>
+<p>
+📊 Esto muestra una clara dominancia de Chrome, seguido de Safari, mientras que los demás ocupan pequeñas porciones del mercado.
+          </p>
+          <h1>2. Indica la dirección de la página web oficial de los siguientes navegadores.</h1>
+          <p>
+            <ul>
+              <li>Chrome: <a href="https://www.google.com/chrome/">Chrome</a></li>
+              <li>Firefox: <a href="https://www.mozilla.org/firefox/">Firefox</a></li>
+                <li>Opera: <a href="https://www.opera.com/">Opera</a></li>
+                  <li>Safari: viene preinstalado en macOS/iOS, Apple no lo ofrece directamente para Windows hoy.</li>
+                    <li>Edge: <a href="https://www.microsoft.com/es-es/edge">Edge</a></li>
+            </ul>
+          </p>
+          <h1>3. Visualice una misma página web en cada uno de los navegadores instalados y compruebe si se ve igual y correctamente en cada uno de ellos. ¿Es igual utilizar un navegador u otro? ¿Se verán las páginas web siempre igual aunque sean navegadores diferentes?</h1>
+          <p>Por ejemplo la página <a href="https://www.example.com">Example.com</a>
+            ¿Se ven igual?
+            No siempre
+            Aunque por norma general todos respetan los estándares, pueden existir diferencias sutiles:</br>
+            Chrome/Edge/Opera comparten el motor Chromium → muy similares.</br>
+            Firefox utiliza un motor distinnto, Gecko y puede comportarse distinto en ciertas funcionalidades CSS o JS.</br>  
+            Safari destaca en Apple, puede mostrar ligeras variaciones en animaciones o fuentes.
+          </p>
+          <h1>4. Si se accede a una página web desde un ordenador y un dispositivo móvil (Smartphone o tablet). ¿Funcionará igual la página desde un dispositivo móvil? ¿Se ve igual que desde un navegador de escritorio?</h1>
+          <p>Hoy en día, la mayoría de páginas usan diseño responsive, adaptándose a pantallas pequeñas y aunque el
+            contenido es esencialmente el mismo, el diseño se adapta al tamaño de la pantalla y forma de interacciónn del usuario (menú "hamburguesa", fuentes escaladas, columnas reordenadas).
+            Cambian los CSS aplicados según el tamaño del dispositivo, su rendimiento puede variar y algunos eventos como el hover puede ver alterasa su funcionalidad
+            por tanto podemos decir que <b>NO se ven exactamente iguales</b>
+            </p>
+        </div>
+      </div>
+
+      <div class="actividad" id="actividad3">
+        <h2>Actividad 1: Crear un título y un párrafo</h2>
+  
+        <h3>📝 Enunciado</h3>
+        <p>1. Realice una página web donde aparezca un encabezado que diga “Ejemplos de formatos de texto”. Antes de cada párrafo debe aparecer un título de segundo nivel que diga “Ejemplo 1, Ejemplo 2, Ejemplo 3, …”. A continuación se debe mostrar el uso de los siguientes formatos de texto, cada uno en un párrafo diferente:
+          Texto normal.
+          Texto en negrita.
+          Texto en cursiva.
+          Texto subrayado.
+          Texto tachado.</p>
+          <p>
+            2. Utilice etiquetas de párrafo para escribir el siguiente texto. El primer párrafo tiene una línea tras un punto y aparte que pertenece al mismo párrafo. A continuación hay una línea horizontal y debajo de la línea un nuevo párrafo. El primer párrafo tiene alineación justificada y el segundo alineación a la derecha. Debe quedar algo así:
+          </p>
+  
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <h1>Ejemplos de formatos de texto</h1>
+
+    <h2>Ejemplo 1</h2>
+    <p>Este es un texto normal sin ningún formato especial.</p>
+
+    <h2>Ejemplo 2</h2>
+    <p><strong>Este es un texto en negrita utilizando la etiqueta &lt;strong&gt;.</strong></p>
+
+    <h2>Ejemplo 3</h2>
+    <p><em>Este es un texto en cursiva utilizando la etiqueta &lt;em&gt;.</em></p>
+
+    <h2>Ejemplo 4</h2>
+    <p><u>Este es un texto subrayado utilizando la etiqueta &lt;u&gt;.</u></p>
+
+    <h2>Ejemplo 5</h2>
+    <p><s>Este es un texto tachado utilizando la etiqueta &lt;s&gt;.</s></p>
+
+    <hr>
+
+    <h2>Ejemplo de párrafos con alineación</h2>
+
+    <!-- Primer párrafo alineado justificado -->
+    <p align="justify">
+        Este es el primer párrafo. Aquí se escribe una línea inicial del texto. <br>
+        Luego de un punto y aparte, continúa una nueva línea que sigue perteneciendo al mismo párrafo.
+    </p>
+
+    <hr>
+
+    <!-- Segundo párrafo alineado a la derecha -->
+    <p align="right">
+        Este es el segundo párrafo. Este texto está alineado a la derecha.
+    </p>
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+          &lt;h1&gt;Ejemplos de formatos de texto&lt;/h1&gt;
+
+          &lt;h2&gt;Ejemplo 1&lt;/h2&gt;
+          &lt;p&gt;Este es un texto normal sin ningún formato especial.&lt;/p&gt;
+      
+          &lt;h2&gt;Ejemplo 2&lt;/h2&gt;
+          &lt;p&gt;&lt;strong&gt;Este es un texto en negrita utilizando la etiqueta &lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
+      
+          &lt;h2&gt;Ejemplo 3&lt;/h2&gt;
+          &lt;p&gt;&lt;em&gt;Este es un texto en cursiva utilizando la etiqueta &lt;em&gt;.&lt;/em&gt;&lt;/p&gt;
+      
+          &lt;h2&gt;Ejemplo 4&lt;/h2&gt;
+          &lt;p&gt;&lt;u&gt;Este es un texto subrayado utilizando la etiqueta &lt;u&gt;.&lt;/u&gt;&lt;/p&gt;
+      
+          &lt;h2&gt;Ejemplo 5&lt;/h2&gt;
+          &lt;p&gt;&lt;s&gt;Este es un texto tachado utilizando la etiqueta &lt;s&gt;.&lt;/s&gt;&lt;/p&gt;
+      
+          &lt;hr&gt;
+      
+          &lt;h2&gt;Ejemplo de párrafos con alineación&lt;/h2&gt;
+      
+          &lt;!-- Primer párrafo alineado justificado --&gt;
+          &lt;p align="justify"&gt;
+              Este es el primer párrafo. Aquí se escribe una línea inicial del texto. &lt;br&gt;
+              Luego de un punto y aparte, continúa una nueva línea que sigue perteneciendo al mismo párrafo.
+          &lt;/p&gt;
+      
+          &lt;hr&gt;
+      
+          &lt;!-- Segundo párrafo alineado a la derecha --&gt;
+          &lt;p align="right"&gt;
+              Este es el segundo párrafo. Este texto está alineado a la derecha.
+          &lt;/p&gt;
+        </code></pre>
+      </div>
+
+      <div class="actividad" id="actividad4">
+        <h2>Actividad 4:</h2>
+  
+        <h3>📝 Enunciado</h3>
+        <p>1. Realice una página web donde se muestre la fórmula para la resolución de ecuaciones de segundo grado (en color rojo) y la fórmula química del agua (en color azul). Para escribir las fórmulas hay que utilizar las etiquetas correspondientes para superíndices y subíndices. El fondo de la página debe ser de color gris. Introduzca un comentario al final de la página que ponga “Este texto es un comentario y no se visualizará en el navegador”.</p>
+  
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <div bgcolor="grey">
+            <h1>Fórmulas</h1>
+
+    <h2>Fórmula de la ecuación de segundo grado</h2>
+    <p>
+        <font color="red">x = (-b ± √(b<sup>2</sup> - 4ac)) / 2a</font>
+    </p>
+
+    <h2>Fórmula química del agua</h2>
+    <p>
+        <font color="blue">H<sub>2</sub>O</font>
+    </p>
+
+    <!-- Este texto es un comentario y no se visualizará en el navegador -->
+            </div>
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+          &lt;body bgcolor="grey"&gt;
+          &lt;h1&gt;Fórmulas&lt;/h1&gt;
+          
+              &lt;h2&gt;Fórmula de la ecuación de segundo grado&lt;/h2&gt;
+              &lt;p&gt;
+                  &lt;font color="red"&gt;x = (-b ± √(b&lt;sup&gt;2&lt;/sup&gt; - 4ac)) / 2a&lt;/font&gt;
+              &lt;/p&gt;
+          
+              &lt;h2&gt;Fórmula química del agua&lt;/h2&gt;
+              &lt;p&gt;
+                  &lt;font color="blue"&gt;H&lt;sub&gt;2&lt;/sub&gt;O&lt;/font&gt;
+              &lt;/p&gt;
+          
+              &lt;!-- Este texto es un comentario y no se visualizará en el navegador --&gt;
+              &lt;/body&gt;
+        </code></pre>
+      </div>
+
+      <div class="actividad" id="actividad5">
+        <h2>Actividad 5:</h2>
+  
+        <h3>📝 Enunciado</h3>
+        <p>Desarrolle una página web que tenga un encabezado de nivel 1 que ponga “Texto preformateado”. Debe aparecer la primera línea pegada a la izquierda y la segunda con una tabulación. La tercera línea incluye varios espacios en blanco consecutivos de forma que aparezcan los números del 1 al 6 separados por espacios en blanco, de forma que entre el 1 y el 2 haya un único espacio, entre el 2 y el 3 dos espacios, entre el 3 y el 4 tres espacios, y así sucesivamente hasta el 6.
+          Debajo se pondrá un encabezado de nivel 2 que ponga “Poema de Gustavo Adolfo Bécquer”, y a continuación un poema de Bécquer que debe mantener su formato asegurando los saltos de línea en los lugares apropiados
+          Hoy la tierra y los cielos me sonríen,
+          hoy llega al fondo de mi alma el sol,
+          hoy la he visto..., la he visto y me ha mirado...,
+          ¡hoy creo en Dios!
+          Establecer el tamaño de letra del poema a4 y color verde. Especifique la fuente Arial y en caso de no estar disponible que se use Courier.</p>
+  
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <h1>Texto preformateado</h1>
+          
+          <p>
+              Línea 1 pegada a la izquierda<br>
+              &#9;Línea 2 con una tabulación delante<br>
+              1  2  3   4    5     6
+          </p>
+      
+          <h2>Poema de Gustavo Adolfo Bécquer</h2>
+      
+          <!-- Para el poema mantenemos el formato con <pre> -->
+          <!-- El tamaño, color y fuente con <font> -->
+      
+          <pre>
+      <font face="Arial, Courier" size="4" color="green">
+      Hoy la tierra y los cielos me sonríen,
+      hoy llega al fondo de mi alma el sol,
+      
+      hoy la he visto..., la he visto y me ha mirado...,
+      
+      ¡hoy creo en Dios!
+      </font>
+          </pre>
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+          &lt;h1&gt;Texto preformateado&lt;/h1&gt;
+
+
+&lt;p&gt;
+    Línea 1 pegada a la izquierda&lt;br&gt;
+    &#9;Línea 2 con una tabulación delante&lt;br&gt;
+    1  2  3   4    5     6
+&lt;/p&gt;
+
+&lt;h2&gt;Poema de Gustavo Adolfo Bécquer&lt;/h2&gt;
+
+&lt;!-- Para el poema mantenemos el formato con &lt;pre&gt; --&gt;
+&lt;!-- El tamaño, color y fuente con &lt;font&gt; --&gt;
+
+&lt;pre&gt;
+&lt;font face="Arial, Courier" size="4" color="green"&gt;
+Hoy la tierra y los cielos me sonríen,
+hoy llega al fondo de mi alma el sol,
+
+hoy la he visto..., la he visto y me ha mirado...,
+
+¡hoy creo en Dios!
+&lt;/font&gt;
+&lt;/pre&gt;
+        </code></pre>
+      </div>
+
+      <div class="actividad" id="actividad6">
+        <h2>Actividad 6:</h2>
+  
+        <h3>📝 Enunciado</h3>
+        <p>1. Realice una página web donde aparezcan distintos tipos de listas.<br/>
+          a. Una lista no ordenada, listando los colores que componen el sistema RGB (rojo, verde y azul).<br/>
+          b. Una lista ordenada, mostrando los meses del año.<br/>
+          c. Una lista de definición, mostrando los días de la semana en inglés con su traducción en español.<br/>
+          2. Realice una página web donde aparezca una lista ordenada con distintos tipos de alimentos (verduras, frutas y pescados). De forma anidada debajo de cada elemento de la lista ordenada se deben insertar tres ejemplos de dicho alimento en forma de lista no ordenada.
+          </p>
+  
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <h1>Tipos de listas</h1>
+
+    <h2>a) Lista no ordenada (Colores RGB)</h2>
+    <ul>
+        <li>Rojo</li>
+        <li>Verde</li>
+        <li>Azul</li>
+    </ul>
+
+    <h2>b) Lista ordenada (Meses del año)</h2>
+    <ol>
+        <li>Enero</li>
+        <li>Febrero</li>
+        <li>Marzo</li>
+        <li>Abril</li>
+        <li>Mayo</li>
+        <li>Junio</li>
+        <li>Julio</li>
+        <li>Agosto</li>
+        <li>Septiembre</li>
+        <li>Octubre</li>
+        <li>Noviembre</li>
+        <li>Diciembre</li>
+    </ol>
+
+    <h2>c) Lista de definición (Días de la semana en inglés y español)</h2>
+    <dl>
+        <dt>Monday</dt>
+        <dd>Lunes</dd>
+        <dt>Tuesday</dt>
+        <dd>Martes</dd>
+        <dt>Wednesday</dt>
+        <dd>Miércoles</dd>
+        <dt>Thursday</dt>
+        <dd>Jueves</dd>
+        <dt>Friday</dt>
+        <dd>Viernes</dd>
+        <dt>Saturday</dt>
+        <dd>Sábado</dd>
+        <dt>Sunday</dt>
+        <dd>Domingo</dd>
+    </dl>
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+          &lt;h1&gt;Tipos de listas&lt;/h1&gt;
+
+          &lt;h2&gt;a) Lista no ordenada (Colores RGB)&lt;/h2&gt;
+          &lt;ul&gt;
+              &lt;li&gt;Rojo&lt;/li&gt;
+              &lt;li&gt;Verde&lt;/li&gt;
+              &lt;li&gt;Azul&lt;/li&gt;
+          &lt;/ul&gt;
+      
+          &lt;h2&gt;b) Lista ordenada (Meses del año)&lt;/h2&gt;
+          &lt;ol&gt;
+              &lt;li&gt;Enero&lt;/li&gt;
+              &lt;li&gt;Febrero&lt;/li&gt;
+              &lt;li&gt;Marzo&lt;/li&gt;
+              &lt;li&gt;Abril&lt;/li&gt;
+              &lt;li&gt;Mayo&lt;/li&gt;
+              &lt;li&gt;Junio&lt;/li&gt;
+              &lt;li&gt;Julio&lt;/li&gt;
+              &lt;li&gt;Agosto&lt;/li&gt;
+              &lt;li&gt;Septiembre&lt;/li&gt;
+              &lt;li&gt;Octubre&lt;/li&gt;
+              &lt;li&gt;Noviembre&lt;/li&gt;
+              &lt;li&gt;Diciembre&lt;/li&gt;
+          &lt;/ol&gt;
+      
+          &lt;h2&gt;c) Lista de definición (Días de la semana en inglés y español)&lt;/h2&gt;
+          &lt;dl&gt;
+              &lt;dt&gt;Monday&lt;/dt&gt;
+              &lt;dd&gt;Lunes&lt;/dd&gt;
+              &lt;dt&gt;Tuesday&lt;/dt&gt;
+              &lt;dd&gt;Martes&lt;/dd&gt;
+              &lt;dt&gt;Wednesday&lt;/dt&gt;
+              &lt;dd&gt;Miércoles&lt;/dd&gt;
+              &lt;dt&gt;Thursday&lt;/dt&gt;
+              &lt;dd&gt;Jueves&lt;/dd&gt;
+              &lt;dt&gt;Friday&lt;/dt&gt;
+              &lt;dd&gt;Viernes&lt;/dd&gt;
+              &lt;dt&gt;Saturday&lt;/dt&gt;
+              &lt;dd&gt;Sábado&lt;/dd&gt;
+              &lt;dt&gt;Sunday&lt;/dt&gt;
+              &lt;dd&gt;Domingo&lt;/dd&gt;
+          &lt;/dl&gt;
+        </code></pre>
+
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <h1>Lista de alimentos</h1>
+
+    <ol>
+        <li>Verduras
+            <ul>
+                <li>Lechuga</li>
+                <li>Tomate</li>
+                <li>Zanahoria</li>
+            </ul>
+        </li>
+        <li>Frutas
+            <ul>
+                <li>Manzana</li>
+                <li>Plátano</li>
+                <li>Naranja</li>
+            </ul>
+        </li>
+        <li>Pescados
+            <ul>
+                <li>Salmón</li>
+                <li>Atún</li>
+                <li>Bacalao</li>
+            </ul>
+        </li>
+    </ol>
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+          &lt;h1&gt;Lista de alimentos&lt;/h1&gt;
+
+    &lt;ol&gt;
+        &lt;li&gt;Verduras
+            &lt;ul&gt;
+                &lt;li&gt;Lechuga&lt;/li&gt;
+                &lt;li&gt;Tomate&lt;/li&gt;
+                &lt;li&gt;Zanahoria&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;Frutas
+            &lt;ul&gt;
+                &lt;li&gt;Manzana&lt;/li&gt;
+                &lt;li&gt;Plátano&lt;/li&gt;
+                &lt;li&gt;Naranja&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;Pescados
+            &lt;ul&gt;
+                &lt;li&gt;Salmón&lt;/li&gt;
+                &lt;li&gt;Atún&lt;/li&gt;
+                &lt;li&gt;Bacalao&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+        </code></pre>
+      </div>
+
+      <div class="actividad" id="actividad7">
+        <h2>Actividad 7:</h2>
+  
+        <h3>📝 Enunciado</h3>
+        <p>
+          1. Confeccione una página web que contenga una tabla con los horarios de clase de alumnos de informática. Hay 4 horas de clase al día de lunes a viernes.<br/>
+2. Confeccione una página web que contenga una tabla.<br/>
+a. La tabla debe ser de 2 columnas. La primera contendrá los nombres de las asignaturas de un alumno, la segunda columna contendrá sus notas.<br/>
+b. Introduzca un encabezado a la tabla que ponga “Asignatura” en la primera columna y “Nota” en la segunda. Cree también un título de tabla que ponga “Calificaciones finales”.<br/>
+c. Introduzca un pie de tabla donde se indique la nota media final del alumno. La primera columna pondrá “Nota media”, y la segunda la nota media teniendo en cuenta cada una de las notas de las asignaturas.
+        </p>
+  
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <table border="1" cellspacing="0" cellpadding="5">
+            <tr>
+                <th>Horas</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+            <tr>
+                <td>Primera Hora</td>
+                <td>GBD</td>
+                <td>ASO</td>
+                <td>LMA</td>
+                <td>GBD</td>
+                <td>GBD</td>
+            </tr>
+            <tr>
+                <td>Segunda Hora</td>
+                <td>GBD</td>
+                <td>ASO</td>
+                <td>LMA</td>
+                <td>GBD</td>
+                <td>GBD</td>
+            </tr>
+            <tr>
+                <td>Tercera Hora/td>
+                <td>LMA</td>
+                <td>IAW</td>
+                <td>ASO</td>
+                <td>ASO</td>
+                <td>IAW</td>
+            </tr>
+            <tr>
+                <td>Cuarta Hora</td>
+                <td>LMA</td>
+                <td>IAW</td>
+                <td>ASO</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+          &lt;table border="1" cellspacing="0" cellpadding="5"&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Horas&lt;/th&gt;
+              &lt;th&gt;Lunes&lt;/th&gt;
+              &lt;th&gt;Martes&lt;/th&gt;
+              &lt;th&gt;Miércoles&lt;/th&gt;
+              &lt;th&gt;Jueves&lt;/th&gt;
+              &lt;th&gt;Viernes&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;Primera Hora&lt;/td&gt;
+              &lt;td&gt;GBD&lt;/td&gt;
+              &lt;td&gt;ASO&lt;/td&gt;
+              &lt;td&gt;LMA&lt;/td&gt;
+              &lt;td&gt;GBD&lt;/td&gt;
+              &lt;td&gt;GBD&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;Segunda Hora&lt;/td&gt;
+              &lt;td&gt;GBD&lt;/td&gt;
+              &lt;td&gt;ASO&lt;/td&gt;
+              &lt;td&gt;LMA&lt;/td&gt;
+              &lt;td&gt;GBD&lt;/td&gt;
+              &lt;td&gt;GBD&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;Tercera Hora/td&gt;
+              &lt;td&gt;LMA&lt;/td&gt;
+              &lt;td&gt;IAW&lt;/td&gt;
+              &lt;td&gt;ASO&lt;/td&gt;
+              &lt;td&gt;ASO&lt;/td&gt;
+              &lt;td&gt;IAW&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;Cuarta Hora&lt;/td&gt;
+              &lt;td&gt;LMA&lt;/td&gt;
+              &lt;td&gt;IAW&lt;/td&gt;
+              &lt;td&gt;ASO&lt;/td&gt;
+              &lt;td&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/table&gt;
+        </code></pre>
+
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <table border="1" cellspacing="0" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>Asignatura</th>
+                    <th>Nota</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Programación</td>
+                    <td>8.5</td>
+                </tr>
+                <tr>
+                    <td>Redes</td>
+                    <td>7.0</td>
+                </tr>
+                <tr>
+                    <td>Matemáticas</td>
+                    <td>9.0</td>
+                </tr>
+                <tr>
+                    <td>Base de datos</td>
+                    <td>8.0</td>
+                </tr>
+                <tr>
+                    <td>Inglés Técnico</td>
+                    <td>7.5</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Nota media</td>
+                    <td>8.0</td>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+          &lt;table border="1" cellspacing="0" cellpadding="5"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Asignatura&lt;/th&gt;
+            &lt;th&gt;Nota&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Programación&lt;/td&gt;
+            &lt;td&gt;8.5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Redes&lt;/td&gt;
+            &lt;td&gt;7.0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Matemáticas&lt;/td&gt;
+            &lt;td&gt;9.0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Base de datos&lt;/td&gt;
+            &lt;td&gt;8.0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Inglés Técnico&lt;/td&gt;
+            &lt;td&gt;7.5&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Nota media&lt;/td&gt;
+            &lt;td&gt;8.0&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&lt;
+        </code></pre>
+      </div>
+
+      <div class="actividad" id="actividad8">
+        <h2>Actividad 8:</h2>
+  
+        <h3>📝 Enunciado</h3>
+        <p>C1. Cree una página web que contenga una tabla con la siguiente distribución de celdas:</p>
+  
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>Módulos</th>
+            </tr>
+            <tr>
+                <td rowspan="2">1º Curso</td>
+                <td>Programación</td>
+            </tr>
+            <tr>
+                <td>Bases de Datos</td>
+            </tr>
+            <tr>
+                <td rowspan="2">2º Curso</td>
+                <td>Lenguaje de Marcas</td>
+            </tr>
+            <tr>
+                <td>Implantación de Aplicaciones Web</td>
+            </tr>
+        </table>
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+          &lt;table border="1" cellpadding="5" cellspacing="0"&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Módulos&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td rowspan="2"&gt;1º Curso&lt;/td&gt;
+              &lt;td&gt;Programación&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;Bases de Datos&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td rowspan="2"&gt;2º Curso&lt;/td&gt;
+              &lt;td&gt;Lenguaje de Marcas&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;Implantación de Aplicaciones Web&lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/table&gt;
+        </code></pre>
+      </div>
+
+      <div class="actividad" id="actividad9">
+        <h2>Actividad 9:</h2>
+  
+        <h3>📝 Enunciado</h3>
+        <p>1. Cree una página web llamada principal.html que contenga distintos tipos de enlaces. <br/>
+          a. Un enlace dirigirá a la página de Google usando dirección absoluta, la página del enlace se abrirá en una nueva ventana.<br/>
+          b. Inserte una o varias noticias, que tengan varios párrafos, copiadas de alguna página de internet. Incluya al final de la noticia un enlace a la dirección de la fuente original de forma que si se pulsa el enlace se abra en una nueva ventana la noticia en su web original.<br/>
+          c. Inserte un enlace interno que lleve al principio de la página.<br/>
+          d. Inserte un enlace interno que lleve al final de la página.<br/>
+          e. Inserte un enlace que lleve a un archivo de imagen.<br/>
+          f. Inserte un enlace que lleve a otra página web usando dirección relativa. La nueva página se creará en la misma carpeta y se la llamará “contacto.html”. Se desea que se abra en la misma ventana.
+          
+          </p>
+  
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+<!-- Inicio de la página -->
+<h1 id="inicio">Página Principal</h1>
+
+<!-- Enlace absoluto que se abre en nueva ventana -->
+<p><a href="https://www.google.com" target="_blank">Ir a Google</a></p>
+
+<!-- Noticia con varios párrafos y enlace a la fuente -->
+<h2>Noticia: Últimos avances en exploración espacial</h2>
+<p>La NASA ha anunciado el próximo lanzamiento de la misión Artemis, que tiene como objetivo llevar de nuevo astronautas a la superficie lunar.</p>
+<p>Este ambicioso proyecto busca establecer una presencia humana sostenible en la Luna para finales de esta década.</p>
+<p>La misión incluirá pruebas de nuevas tecnologías y servirá como preparación para futuras expediciones a Marte.</p>
+<p><a href="https://www.nasa.gov/specials/artemis/" target="_blank">Leer la noticia completa en la fuente oficial</a></p>
+
+<!-- Enlace interno que lleva al final de la página -->
+<p><a href="#final">Ir al final de la página</a></p>
+
+<!-- Enlace a un archivo de imagen -->
+<p><a href="imagen.jpg" target="_blank">Ver Imagen</a></p>
+
+<!-- Enlace a otra página web (relativa) que se abrirá en la misma ventana -->
+<p><a href="contacto.html">Ir a la página de contacto</a></p>
+
+<!-- Contenido extra para que la página tenga suficiente espacio -->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem nec sem bibendum fermentum. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem nec sem bibendum fermentum. 
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem nec sem bibendum fermentum. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem nec sem bibendum fermentum. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem nec sem bibendum fermentum. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+
+<!-- Enlace interno que lleva al inicio de la página -->
+<p><a href="#inicio">Ir al inicio de la página</a></p>
+
+<!-- Final de la página -->
+<h3 id="final">Fin de la Página</h3>
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+          &lt;!-- Inicio de la página --&gt;
+          &lt;h1 id="inicio"&gt;Página Principal&lt;/h1&gt;
+          
+          &lt;!-- Enlace absoluto que se abre en nueva ventana --&gt;
+          &lt;p&gt;&lt;a href="https://www.google.com" target="_blank"&gt;Ir a Google&lt;/a&gt;&lt;/p&gt;
+          
+          &lt;!-- Noticia con varios párrafos y enlace a la fuente --&gt;
+          &lt;h2&gt;Noticia: Últimos avances en exploración espacial&lt;/h2&gt;
+          &lt;p&gt;La NASA ha anunciado el próximo lanzamiento de la misión Artemis, que tiene como objetivo llevar de nuevo astronautas a la superficie lunar.&lt;/p&gt;
+          &lt;p&gt;Este ambicioso proyecto busca establecer una presencia humana sostenible en la Luna para finales de esta década.&lt;/p&gt;
+          &lt;p&gt;La misión incluirá pruebas de nuevas tecnologías y servirá como preparación para futuras expediciones a Marte.&lt;/p&gt;
+          &lt;p&gt;&lt;a href="https://www.nasa.gov/specials/artemis/" target="_blank"&gt;Leer la noticia completa en la fuente oficial&lt;/a&gt;&lt;/p&gt;
+          
+          &lt;!-- Enlace interno que lleva al final de la página --&gt;
+          &lt;p&gt;&lt;a href="#final"&gt;Ir al final de la página&lt;/a&gt;&lt;/p&gt;
+          
+          &lt;!-- Enlace a un archivo de imagen --&gt;
+          &lt;p&gt;&lt;a href="imagen.jpg" target="_blank"&gt;Ver Imagen&lt;/a&gt;&lt;/p&gt;
+          
+          &lt;!-- Enlace a otra página web (relativa) que se abrirá en la misma ventana --&gt;
+          &lt;p&gt;&lt;a href="contacto.html"&gt;Ir a la página de contacto&lt;/a&gt;&lt;/p&gt;
+          
+          &lt;!-- Contenido extra para que la página tenga suficiente espacio --&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem nec sem bibendum fermentum. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/p&gt;
+          
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.&lt;/p&gt;
+          
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem nec sem bibendum fermentum. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/p&gt;
+            
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.&lt;/p&gt;
+          
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem nec sem bibendum fermentum. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/p&gt;
+              
+              &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.&lt;/p&gt;
+          
+              &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem nec sem bibendum fermentum. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/p&gt;
+                
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.&lt;/p&gt;
+          
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem nec sem bibendum fermentum. 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/p&gt;
+                  
+                  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.&lt;/p&gt;
+          
+          &lt;!-- Enlace interno que lleva al inicio de la página --&gt;
+          &lt;p&gt;&lt;a href="#inicio"&gt;Ir al inicio de la página&lt;/a&gt;&lt;/p&gt;
+          
+          &lt;!-- Final de la página --&gt;
+          &lt;h3 id="final"&gt;Fin de la Página&lt;/h3&gt;
+        </code></pre>
+
+        <h3>📝 Enunciado</h3>
+        <p>2. En la página web llamada contacto.html<br/>
+          a. Se quiere que la página creada anteriormente y ésta estén vinculadas. Para eso incluya un enlace que diga “Volver a la página principal” que lleve a la página principal.html y se abrirá en la misma ventana.<br/>
+          b. Incluya un enlace que permita descargar el CV que está en un archivo pdf y que se abra en una nueva ventana.<br/>
+          c. Incluya un enlace con una dirección de correo electrónico que será “info@trabajador007.com”. El propio enlace debe ser la imagen de un sobre, un buzón, una arroba o algo similar.<br/>
+          d. Se desea que al pulsar el enlace de correo electrónico se envíe un mensaje a la dirección del enlace, con copia a la dirección supervisor@trabajador007.com. Además en el asunto del mensaje debe poner por defecto “Pedir información”.</p>
+  
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <h1>Página de Contacto</h1>
+
+          <!-- Enlace para volver a la página principal -->
+          <p><a href="principal.html">Volver a la página principal</a></p>
+      
+          <!-- Enlace para descargar el CV en PDF en una nueva ventana -->
+          <p><a href="cv.pdf" target="_blank">Descargar CV</a></p>
+      
+          <!-- Enlace de correo con imagen (puede ser un sobre, por ejemplo: sobre.png) -->
+          <p>
+            <a href="mailto:info@trabajador007.com?cc=supervisor@trabajador007.com&subject=Pedir%20información">
+              <img src="https://cdn-icons-png.flaticon.com/512/542/542638.png" alt="Enviar correo" width="50" height="50">
+          </a>
+          </p>
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+  &lt &lt;h1&gt;Página de Contacto&lt;/h1&gt;
+
+  &lt;!-- Enlace para volver a la página principal --&gt;
+  &lt;p&gt;&lt;a href="principal.html"&gt;Volver a la página principal&lt;/a&gt;&lt;/p&gt;
+
+  &lt;!-- Enlace para descargar el CV en PDF en una nueva ventana --&gt;
+  &lt;p&gt;&lt;a href="cv.pdf" target="_blank"&gt;Descargar CV&lt;/a&gt;&lt;/p&gt;
+
+  &lt;!-- Enlace de correo con imagen (puede ser un sobre, por ejemplo: sobre.png) --&gt;
+  &lt;p&gt;
+    &lt;a href="mailto:info@trabajador007.com?cc=supervisor@trabajador007.com&subject=Pedir%20información"&gt;
+      &lt;img src="https://cdn-icons-png.flaticon.com/512/542/542638.png" alt="Enviar correo" width="50" height="50"&gt;
+  &lt;/a&gt;
+  &lt;/p&gt;
+        </code></pre>
+      </div>
+
+      <div class="actividad" id="actividad10">
+        <h2>Actividad 10:</h2>
+  
+        <h3>📝 Enunciado</h3>
+        <p>Crea un encabezado de nivel 1 con el texto "Hola Mundo" y un párrafo que diga "Estoy aprendiendo HTML".</p>
+  
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <h1>Hola Mundo</h1>
+          <p>Estoy aprendiendo HTML</p>
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+  &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+  &lt;p&gt;Estoy aprendiendo HTML&lt;/p&gt;
+        </code></pre>
+      </div>
+
+      <div class="actividad" id="actividad11">
+        <h2>Actividad 11:</h2>
+  
+        <h3>📝 Enunciado</h3>
+        <p>1. Desarrolle una página web utilizando capas.<br/>
+          a. La estructura de la página constará de una cabecera en la parte superior que ocupa todo el ancho. La parte central constará de 2 capas dividiendo el ancho en partes iguales. Y abajo del todo habrá otra capa que será el pie de página.<br/>
+          b. Se pondrá un color de fondo distinto a cada una de las 4 capas para poder distinguirlas fácilmente. En la capa del título aparecerá un encabezado con el texto “Página estructurada con capas”. Y en el pie un texto que diga “Pie de página”.<br/>
+          c. La capa central izquierda contendrá una lista con el nombre de 5 colores. La fuente de cada elemento de la lista tendrá el color de su nombre y de tamaño 18px.</p>
+  
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+         
+<!-- Cabecera -->
+<div bgcolor="lightblue" width="100%" height="100" align="center">
+  <h1>Página estructurada con capas</h1>
+</div>
+
+<!-- Cuerpo central -->
+<div>
+
+  <!-- Capa izquierda -->
+  <div bgcolor="lightgreen" align="left" width="50%" height="300" style="display: inline-block; vertical-align: top;">
+      <h2>Colores</h2>
+      <ul>
+          <li><font color="red" size="4">Rojo</font></li>
+          <li><font color="blue" size="4">Azul</font></li>
+          <li><font color="green" size="4">Verde</font></li>
+          <li><font color="yellow" size="4">Amarillo</font></li>
+          <li><font color="purple" size="4">Morado</font></li>
+      </ul>
+  </div>
+
+  <!-- Capa derecha -->
+  <div bgcolor="lightcoral" align="left" width="50%" height="300" style="display: inline-block; vertical-align: top;">
+      <h2>Contenido derecho</h2>
+      <p>Aquí puede ir cualquier contenido adicional.</p>
+  </div>
+
+</div>
+
+<!-- Pie de página -->
+<div bgcolor="lightgray" width="100%" height="50" align="center">
+  <p>Pie de página</p>
+</div>
+
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+          &lt;!-- Cabecera --&gt;
+&lt;div bgcolor="lightblue" width="100%" height="100" align="center"&gt;
+    &lt;h1&gt;Página estructurada con capas&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;!-- Cuerpo central --&gt;
+&lt;div&gt;
+
+    &lt;!-- Capa izquierda --&gt;
+    &lt;div bgcolor="lightgreen" align="left" width="50%" height="300" style="display: inline-block; vertical-align: top;"&gt;
+        &lt;h2&gt;Colores&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;font color="red" size="4"&gt;Rojo&lt;/font&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;font color="blue" size="4"&gt;Azul&lt;/font&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;font color="green" size="4"&gt;Verde&lt;/font&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;font color="yellow" size="4"&gt;Amarillo&lt;/font&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;font color="purple" size="4"&gt;Morado&lt;/font&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Capa derecha --&gt;
+    &lt;div bgcolor="lightcoral" align="left" width="50%" height="300" style="display: inline-block; vertical-align: top;"&gt;
+        &lt;h2&gt;Contenido derecho&lt;/h2&gt;
+        &lt;p&gt;Aquí puede ir cualquier contenido adicional.&lt;/p&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;!-- Pie de página --&gt;
+&lt;div bgcolor="lightgray" width="100%" height="50" align="center"&gt;
+    &lt;p&gt;Pie de página&lt;/p&gt;
+&lt;/div&gt;
+        </code></pre>
+      </div>
+
+      <div class="actividad" id="actividad12">
+        <h2>Actividad 12:</h2>
+  
+        <h3>📝 Enunciado</h3>
+        <p>Pregunta 1. Crear una estructura de páginas similar a la del sitio web.<br/>
+          Pregunta 2. Enlazar cada una de las páginas con los elementos que se relacionan. Teniendo en cuenta la bidireccionalidad de las flechas coloreadas de azul y las unidireccionales que coloreadas de rojo.</p>
+  
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <h1>Hola Mundo</h1>
+          <p>Estoy aprendiendo HTML</p>
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+  &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+  &lt;p&gt;Estoy aprendiendo HTML&lt;/p&gt;
+        </code></pre>
+      </div>
+
+
+
+      
+
+      <!-- Switch de modo claro/oscuro -->
+      <span class="switch-label" id="modoTexto">Modo oscuro</span>
+      <label class="switch">
+        <input type="checkbox" id="modoSwitch" onchange="toggleModo()" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="menu">
+      <h2>Ejercicios</h2>
+
+      <!-- Filtro de búsqueda -->
+      <input
+        type="text"
+        id="filtro-menu"
+        placeholder="Buscar actividad..."
+        onkeyup="filtrarTodo()"
+        style="
+          width: 100%;
+          padding: 6px;
+          margin-bottom: 1rem;
+          border-radius: 4px;
+          border: none;
+          outline: none;
+        "
+      />
+
+      <!-- Enlaces del menú -->
+      <div id="lista-actividades">
+        <a href="#actividad1">Actividad 1</a>
+        <a href="#actividad2">Actividad 2</a>
+        <a href="#actividad3">Actividad 3</a>
+        <a href="#actividad4">Actividad 4</a>
+        <a href="#actividad5">Actividad 5</a>
+        <a href="#actividad6">Actividad 6</a>
+        <a href="#actividad7">Actividad 7</a>
+        <a href="#actividad8">Actividad 8</a>
+        <a href="#actividad9">Actividad 9</a>
+        <a href="#actividad10">Actividad 10</a>
+        <a href="#actividad11">Actividad 11</a>
+        <a href="#actividad12">Actividad 12</a>
+        <!-- Agrega más enlaces según tus ejercicios -->
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-html.min.js"></script>
+    <script>
+      function toggleModo() {
+        document.body.classList.toggle("dark");
+        const switchTexto = document.getElementById("modoTexto");
+        const modoActivo = document.body.classList.contains("dark");
+
+        // Actualiza el texto para mostrar el modo al que se va a cambiar
+        switchTexto.textContent = modoActivo ? "Modo claro" : "Modo oscuro";
+
+        // Sincroniza el checkbox si se cambia por código
+        document.getElementById("modoSwitch").checked = modoActivo;
+      }
+
+      function filtrarTodo() {
+        const input = document.getElementById("filtro-menu");
+        const filtro = input.value.toLowerCase();
+
+        // Filtrar enlaces del menú
+        const enlaces = document.querySelectorAll("#lista-actividades a");
+        enlaces.forEach((enlace) => {
+          const texto = enlace.textContent.toLowerCase();
+          enlace.style.display = texto.includes(filtro) ? "block" : "none";
+        });
+
+        // Filtrar actividades en el contenido
+        const actividades = document.querySelectorAll(".actividad");
+        actividades.forEach((actividad) => {
+          const textoActividad = actividad.innerText.toLowerCase();
+          actividad.style.display = textoActividad.includes(filtro)
+            ? "block"
+            : "none";
+        });
+      }
+
+      // Configura el texto del switch al cargar
+      window.addEventListener("DOMContentLoaded", () => {
+        const modoActivo = document.body.classList.contains("dark");
+        document.getElementById("modoTexto").textContent = modoActivo
+          ? "Modo claro"
+          : "Modo oscuro";
+        document.getElementById("modoSwitch").checked = modoActivo;
+      });
+    </script>
+  </body>
+</html>
