@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Teclado Interactivo con Sonido Mecánico</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #e0e0e0;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .fila {
+      display: flex;
+      margin-bottom: 5px;
+    }
+    .tecla {
+      border: 1px solid #999;
+      border-radius: 5px;
+      box-shadow: 0 4px #666;
+      background: #f2f2f2;
+      width: 50px;
+      height: 50px;
+      margin: 3px;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.1s;
+    }
+    .tecla.wide { width: 80px; }
+    .tecla.space { width: 300px; }
+    .tecla:active,
+    .tecla.pulsada {
+      box-shadow: 0 2px #444;
+      transform: translateY(2px);
+      background: #d9d9d9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Efecto sonoro mecánico -->
+  <audio id="tecla-sound" src="https://orangefreesounds.com/wp-content/uploads/2024/11/Mechanical-click-sound-effect.mp3" preload="auto"></audio>
+
+  <!-- Teclado completo (simplificado) -->
+  <div class="fila">
+    <div class="tecla">º</div><div class="tecla">1</div><div class="tecla">2</div>
+    <div class="tecla">3</div><div class="tecla">4</div><div class="tecla">5</div>
+    <div class="tecla">6</div><div class="tecla">7</div><div class="tecla">8</div>
+    <div class="tecla">0</div><div class="tecla">'</div><div class="tecla">¡</div>
+    <div class="tecla wide" data-key="Backspace">Back</div>
+  </div>
+
+  <div class="fila">
+    <div class="tecla wide" data-key="Tab">Tab</div>
+    <div class="tecla">Q</div><div class="tecla">W</div><div class="tecla">E</div>
+    <div class="tecla">R</div><div class="tecla">T</div><div class="tecla">Y</div>
+    <div class="tecla">U</div><div class="tecla">I</div><div class="tecla">O</div>
+    <div class="tecla">P</div><div class="tecla">´</div><div class="tecla">+ </div>
+  </div>
+
+  <div class="fila">
+    <div class="tecla wide" data-key="CapsLock">Caps</div>
+    <div class="tecla">A</div><div class="tecla">S</div><div class="tecla">D</div>
+    <div class="tecla">F</div><div class="tecla">G</div><div class="tecla">H</div>
+    <div class="tecla">J</div><div class="tecla">K</div><div class="tecla">L</div>
+    <div class="tecla">Ñ</div><div class="tecla">Ç</div>
+    <div class="tecla wide" data-key="Enter">Enter</div>
+  </div>
+
+  <div class="fila">
+    <div class="tecla wide" data-key="Shift">Shift</div>
+    <div class="tecla">Z</div><div class="tecla">X</div><div class="tecla">C</div>
+    <div class="tecla">V</div><div class="tecla">B</div><div class="tecla">N</div>
+    <div class="tecla">M</div><div class="tecla">,</div><div class="tecla">.</div>
+    <div class="tecla">-</div><div class="tecla wide" data-key="Shift">Shift</div>
+  </div>
+
+  <div class="fila">
+    <div class="tecla wide" data-key="Control">Ctrl</div>
+    <div class="tecla wide" data-key="Alt">Alt</div>
+    <div class="tecla space" data-key=" ">Espacio</div>
+    <div class="tecla wide" data-key="Alt">Alt</div>
+    <div class="tecla wide" data-key="Control">Ctrl</div>
+  </div>
+
+  <script>
+    const teclas = document.querySelectorAll('.tecla');
+    const sonido = document.getElementById('tecla-sound');
+
+    function pulsar(teclaEl) {
+      sonido.currentTime = 0;
+      sonido.play();
+      teclaEl.classList.add('pulsada');
+      setTimeout(() => teclaEl.classList.remove('pulsada'), 100);
+    }
+
+    teclas.forEach(tecla => {
+      tecla.addEventListener('mousedown', () => pulsar(tecla));
+    });
+
+    document.addEventListener('keydown', e => {
+      let key = e.key === ' ' ? ' ' : e.key;
+      key = key.length === 1 ? key.toUpperCase() : key;
+      const teclaEl = [...teclas].find(el =>
+        el.textContent.trim().toUpperCase() === key.toUpperCase() ||
+        (e.key === ' ' && el.textContent.trim() === 'Espacio') ||
+        el.dataset.key === e.key
+      );
+      if (teclaEl) pulsar(teclaEl);
+    });
+  </script>
+
+</body>
+</html>

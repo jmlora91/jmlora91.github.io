@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jose Manuel Lora Mora - Ejercicio XXX</title>
+    <!-- Autor de la página -->
+    <meta name="author" content="Jose Manuel Lora Mora">
+    <!-- Descripción para motores de búsqueda -->
+    <meta name="description" content="Esto es un ejercicio del curso">
+    <!-- Codificación de caracteres -->
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Inserción de Imágenes y Elementos Multimedia en HTML</h1>
+
+    <h2>1. Imágenes</h2>
+    <p>
+      Para insertar imágenes en un sitio web se usa la etiqueta <code>&lt;img&gt;</code>. 
+      Los atributos principales que se utilizan son:
+    </p>
+    <ul>
+      <li><code>src</code>: indica la ruta o URL de la imagen.</li>
+      <li><code>alt</code>: texto alternativo que describe la imagen para accesibilidad.</li>
+      <li><code>width</code> y <code>height</code>: establecen el tamaño de la imagen en píxeles (opcional).</li>
+    </ul>
+    <p>Ejemplo práctico:</p>
+    <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo" width="150" height="150">
+    
+    <hr>
+    
+    <h2>2. Videos locales (archivos propios)</h2>
+    <p>
+      Para insertar videos propios almacenados localmente se usa la etiqueta <code>&lt;video&gt;</code> con estos atributos principales:
+    </p>
+    <ul>
+      <li><code>src</code>: ruta o URL del archivo de video.</li>
+      <li><code>controls</code>: muestra controles para reproducir, pausar, etc.</li>
+      <li><code>width</code> y <code>height</code>: tamaño del reproductor de video.</li>
+    </ul>
+    <p>Ejemplo práctico (para que funcione, debe haber un archivo "video.mp4" en el mismo directorio):</p>
+    <video src="video.mp4" controls width="320" height="240"></video>
+    
+    <hr>
+    
+    <h2>3. Videos de YouTube (contenido externo)</h2>
+    <p>
+      Para insertar videos de YouTube o cualquier otro contenido multimedia externo se usa la etiqueta <code>&lt;iframe&gt;</code>, que permite embeber el video directamente en la página.
+    </p>
+    <ul>
+      <li><code>src</code>: URL del video en modo "embed" de YouTube.</li>
+      <li><code>width</code> y <code>height</code>: tamaño del reproductor.</li>
+      <li><code>frameborder="0"</code>: elimina el borde del iframe (opcional).</li>
+      <li><code>allowfullscreen</code>: permite que el video se vea en pantalla completa.</li>
+    </ul>
+    <p>Ejemplo práctico con un video de YouTube:</p>
+    <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+    frameborder="0" allowfullscreen></iframe>
+</body>
+</html>

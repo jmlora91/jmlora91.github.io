@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jose Manuel Lora Mora - Ejercicio XXX</title>
+    <!-- Autor de la página -->
+    <meta name="author" content="Jose Manuel Lora Mora">
+    <!-- Descripción para motores de búsqueda -->
+    <meta name="description" content="Esto es un ejercicio del curso">
+    <!-- Codificación de caracteres -->
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Ejemplo de Inserción de Imágenes en HTML</h1>
+
+<h2>a. Imagen de un cangrejo con texto alternativo</h2>
+<p>Se utiliza la etiqueta <code>&lt;img&gt;</code> con los atributos <code>src</code> (ruta de la imagen) y <code>alt</code> (texto alternativo para accesibilidad).</p>
+<p>Ejemplo:</p>
+<img src="img/cangrejo.jpg" alt="Imagen de un cangrejo">
+
+<hr>
+
+<h2>b. La misma imagen pero en tamaño reducido</h2>
+<p>Para cambiar el tamaño de la imagen, se utilizan los atributos <code>width</code> y <code>height</code>.</p>
+<p>Ejemplo:</p>
+<img src="img/cangrejo.jpg" alt="Imagen de un cangrejo pequeña" width="150" height="150">
+
+<hr>
+
+<h2>c. Imagen de una pelota que es un enlace</h2>
+<p>Para hacer clic en una imagen y que te lleve a otra página, se usa la etiqueta <code>&lt;a&gt;</code> y dentro de ella la etiqueta <code>&lt;img&gt;</code>.</p>
+<p>En este caso, la imagen se obtiene desde internet usando una ruta absoluta (una URL completa).</p>
+<p>Ejemplo:</p>
+<a href="https://www.espn.com" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Soccer_ball.svg" alt="Pelota de fútbol" width="150" height="150">
+</a>
+
+<hr>
+
+<h2>d. Explicación de etiquetas y atributos necesarios para insertar imágenes</h2>
+<ul>
+    <li><strong>Etiqueta:</strong> <code>&lt;img&gt;</code></li>
+    <li><strong>Atributos necesarios:</strong>
+        <ul>
+            <li><code>src</code>: Define la ruta de la imagen (puede ser relativa o absoluta).</li>
+            <li><code>alt</code>: Proporciona un texto alternativo para accesibilidad y en caso de que la imagen no se cargue.</li>
+            <li><code>width</code>: Establece el ancho de la imagen en píxeles.</li>
+            <li><code>height</code>: Establece la altura de la imagen en píxeles.</li>
+        </ul>
+    </li>
+    <li><strong>Para convertir una imagen en enlace:</strong> Se utiliza la etiqueta <code>&lt;a&gt;</code> y dentro se coloca la etiqueta <code>&lt;img&gt;</code>.</li>
+</ul>
+</body>
+</html>

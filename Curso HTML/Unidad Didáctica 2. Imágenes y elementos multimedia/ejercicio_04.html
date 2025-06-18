@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jose Manuel Lora Mora - Ejercicio XXX</title>
+    <!-- Autor de la página -->
+    <meta name="author" content="Jose Manuel Lora Mora">
+    <!-- Descripción para motores de búsqueda -->
+    <meta name="description" content="Esto es un ejercicio del curso">
+    <!-- Codificación de caracteres -->
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Mapa de Imagen con Cuatro Áreas Clicables</h1>
+
+    <p>Haz clic en cada cuadrante para ir a un enlace diferente.</p>
+    
+    <!-- Imagen del mapa -->
+    <img src="img/cuadro_colores.jpg" alt="Cuadro de colores" usemap="#mapacolores">
+    
+    <!-- Definición del mapa -->
+    <map name="mapacolores">
+        <!-- Área superior izquierda -->
+        <area shape="rect" coords="0,0,100,100" href="https://www.ejemplo1.com" alt="Cuadro 1">
+    
+        <!-- Área superior derecha -->
+        <area shape="rect" coords="100,0,200,100" href="https://www.ejemplo2.com" alt="Cuadro 2">
+    
+        <!-- Área inferior izquierda -->
+        <area shape="rect" coords="0,100,100,200" href="https://www.ejemplo3.com" alt="Cuadro 3">
+    
+        <!-- Área inferior derecha -->
+        <area shape="rect" coords="100,100,200,200" href="https://www.ejemplo4.com" alt="Cuadro 4">
+    </map>
+</body>
+</html>
