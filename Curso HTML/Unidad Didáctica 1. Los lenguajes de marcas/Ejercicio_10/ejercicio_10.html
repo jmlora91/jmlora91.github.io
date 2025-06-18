@@ -9,7 +9,13 @@
     <!-- Codificación de caracteres -->
     <meta charset="UTF-8">
 </head>
-<body>
-
-</body>
+    <frameset rows="200px, 200px, *" cols="*" framespacing="0" frameborder="0" border="0">
+        <!-- Primera fila con dos marcos horizontales -->
+        <frameset cols="50%, 50%" framespacing="0" frameborder="0" border="0" noresize>
+            <frame src="frame_1.html" name="frame1" noresize>
+            <frame src="frame_2.html" name="frame2" noresize>
+        </frameset>    
+        <!-- Tercera fila: marco inferior con scroll siempre activo -->
+        <frame src="frame_3.html" name="frame3" scrolling="yes" noresize>
+    </frameset>
 </html>
