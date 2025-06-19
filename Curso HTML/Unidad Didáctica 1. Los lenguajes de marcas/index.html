@@ -9,6 +9,41 @@
       rel="stylesheet"
     />
     <style>
+      .teclado {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #e0e0e0;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .fila {
+      display: flex;
+      margin-bottom: 5px;
+    }
+    .tecla {
+      border: 1px solid #999;
+      border-radius: 5px;
+      box-shadow: 0 4px #666;
+      background: #f2f2f2;
+      width: 50px;
+      height: 50px;
+      margin: 3px;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.1s;
+    }
+    .tecla.wide { width: 80px; }
+    .tecla.space { width: 300px; }
+    .tecla:active,
+    .tecla.pulsada {
+      box-shadow: 0 2px #444;
+      transform: translateY(2px);
+      background: #d9d9d9;
+    }
+
       :root {
         --bg-color: #fefefe;
         --text-color: #1c1c1e;
@@ -1241,6 +1276,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant m
        
         <h3>✅ Resultado</h3>
         <div class="resultado">
+          <div class="teclado">
             <!-- Efecto sonoro mecánico -->
   <audio id="tecla-sound" src="https://orangefreesounds.com/wp-content/uploads/2024/11/Mechanical-click-sound-effect.mp3" preload="auto"></audio>
 
@@ -1287,6 +1323,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant m
   </div>
 
         </div>
+      </div>
   
         <h3>💻 Código</h3>
         <pre><code class="language-html">
