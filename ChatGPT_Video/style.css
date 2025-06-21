@@ -34,7 +34,6 @@ body {
     display: flex;
     flex-direction: column;
     padding: 16px;
-    overflow-y: auto;
 }
 
 /* Estilo base de los mensajes */
@@ -88,18 +87,4 @@ body {
     background-color: #40414f;
     color: white;
     font-size: 16px;
-}
-
-/* Cursor parpadeante */
-.cursor {
-    display: inline-block;
-    width: 8px;
-    background-color: #d1d5db;
-    margin-left: 2px;
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0; }
 }
