@@ -1,0 +1,11 @@
+
+{
+  "conversacion": [
+    { "autor": "user", "mensaje": "Oye ChatGPT, ¿qué me puedes contar sobre la AM Encarnación?", "tiempo": 2000 },
+    { "autor": "chatgpt", "mensaje": "La Agrupación Musical Nuestra Señora de la Encarnación es de Sevilla. Pertenece a la Hermandad de San Benito.", "tiempo": 3000 },
+    { "autor": "user", "mensaje": "¿Y qué marchas suelen tocar?", "tiempo": 1500 },
+    { "autor": "chatgpt", "mensaje": "Marchas como Alma de Dios, La Saeta, Consuelo Gitano y Costalero. No tocan marchas modernas como Y al Tercer Día.", "tiempo": 4000 },
+    { "autor": "user", "mensaje": "¿Cómo se mueven en redes sociales?", "tiempo": 1500 },
+    { "autor": "chatgpt", "mensaje": "Tienen Instagram, Facebook y YouTube. Publican ensayos y procesiones con mucho cuidado y sin buscar viralidad.", "tiempo": 4000 }
+  ]
+}

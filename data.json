@@ -1,0 +1,58 @@
+{
+    "menu": [
+      { "id": "inicio", "label": "Inicio" },
+      { "id": "sobre-mi", "label": "Sobre mí" },
+      { "id": "proyectos", "label": "Proyectos" },
+      { "id": "habilidades", "label": "Habilidades" },
+      { "id": "experiencia", "label": "Experiencia" },
+      { "id": "formacion", "label": "Formación" },
+      { "id": "contacto", "label": "Contacto" },
+      { "id": "toggle-theme", "label": "Modo oscuro" }
+    ],
+    "sections": {
+      "inicio": {
+        "title": "Bienvenido",
+        "content": "<p>¡Hola! Soy Josema Lora, desarrollador web apasionado por crear experiencias digitales limpias y eficientes.</p><p>Este es mi portafolio donde comparto mis proyectos y habilidades.</p>"
+      },
+      "sobre-mi": {
+        "title": "Sobre mí",
+        "content": "<p>Tengo más de 7 años de experiencia en desarrollo web, especializado en tecnologías front-end como HTML, CSS y JavaScript, así como en frameworks modernos.</p><p>Me encanta resolver problemas complejos con soluciones simples y eficientes, siempre aprendiendo y mejorando.</p>"
+      },
+      "proyectos": {
+        "title": "Proyectos",
+        "content": "<ul><li><strong>Portafolio Personal:</strong> Página web personal desarrollada con HTML, CSS y JavaScript para mostrar mis trabajos y habilidades.</li><li><strong>App de Gestión:</strong> Aplicación web para gestionar tareas y proyectos con sistema de usuarios y roles.</li><li><strong>Blog Tech:</strong> Plataforma de blogging creada con React y Firebase para compartir artículos técnicos.</li></ul>"
+      },
+      "habilidades": {
+        "title": "Habilidades",
+        "skillsList": [
+          { "name": "HTML", "level": 95 },
+          { "name": "CSS", "level": 90 },
+          { "name": "JavaScript", "level": 85 },
+          { "name": "React", "level": 80 },
+          { "name": "Node.js", "level": 75 },
+          { "name": "Git", "level": 85 }
+        ]
+      },
+      "experiencia": {
+        "title": "Experiencia",
+        "content": "<ul><li><strong>Desarrollador Front-end</strong> en TechSolutions (2020 - Presente): Desarrollo y mantenimiento de aplicaciones web responsivas.</li><li><strong>Desarrollador Fullstack</strong> en WebCreativo (2017 - 2020): Proyectos completos desde backend a frontend, con énfasis en UX/UI.</li></ul>"
+      },
+      "formacion": {
+        "title": "Formación",
+        "content": "<ul><li>Grado en Ingeniería Informática - Universidad Complutense de Madrid (2013 - 2017)</li><li>Curso avanzado de React - Platzi (2021)</li><li>Certificación en Desarrollo Web - freeCodeCamp (2020)</li></ul>"
+      },
+      "contacto": {
+        "title": "Contacto",
+        "content": "<p>Estoy abierto a nuevas oportunidades y colaboraciones. Puedes contactarme a través de:</p><ul><li>Email: <a href=\"mailto:josema@email.com\">josema@email.com</a></li><li>LinkedIn: <a href=\"https://linkedin.com/in/josema\" target=\"_blank\">linkedin.com/in/josema</a></li><li>GitHub: <a href=\"https://github.com/josema\" target=\"_blank\">github.com/josema</a></li></ul>"
+      },
+      "footer": {
+        "content": "© 2025 Josema Lora - Todos los derechos reservados."
+      },
+      "contacto": {
+        "title": "Contacto",
+        "content": "<p>Estoy abierto a nuevas oportunidades y colaboraciones. Puedes contactarme a través del siguiente formulario:</p><form id='contact-form'><label for='name'>Nombre:</label><input type='text' id='name' name='name' required><label for='email'>Email:</label><input type='email' id='email' name='email' required><label for='message'>Mensaje:</label><textarea id='message' name='message' required></textarea><button type='submit'>Enviar</button><div id='form-response' class='form-response'></div></form>"
+      }
+      
+    }
+  }
+  
