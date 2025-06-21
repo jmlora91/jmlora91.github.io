@@ -14,40 +14,26 @@ function iniciarChat() {
         let msg = document.createElement('div');
         msg.classList.add('mensaje');
         msg.classList.add(mensajes[index].autor);
-        msg.innerText = mensajes[index].mensaje;
-        document.getElementById('chatContainer').appendChild(msg);
 
-        setTimeout(() => { msg.classList.add('visible'); }, 50);
-
-        setTimeout(() => {
-            index++;
-            iniciarChat();
-        }, mensajes[index].tiempo);
+        if (mensajes[index].autor === 'chatgpt') {
+            msg.innerText = 'ChatGPT is typing...';
+            document.getElementById('chatContainer').appendChild(msg);
+            setTimeout(() => {
+                msg.innerText = mensajes[index].mensaje;
+                msg.classList.add('visible');
+                index++;
+                setTimeout(iniciarChat, mensajes[index - 1].tiempo);
+            }, 1000);
+        } else {
+            msg.innerText = mensajes[index].mensaje;
+            document.getElementById('chatContainer').appendChild(msg);
+            setTimeout(() => { msg.classList.add('visible'); }, 50);
+            setTimeout(() => {
+                index++;
+                iniciarChat();
+            }, mensajes[index].tiempo);
+        }
     }
-}
-
-async function startRecording() {
-    let stream = await navigator.mediaDevices.getDisplayMedia({ video: { frameRate: 30 } });
-    let recorder = new MediaRecorder(stream);
-    let chunks = [];
-
-    recorder.ondataavailable = e => chunks.push(e.data);
-    recorder.onstop = () => {
-        let blob = new Blob(chunks, { type: 'video/webm' });
-        let url = URL.createObjectURL(blob);
-        let a = document.createElement('a');
-        a.href = url;
-        a.download = 'video_chatgpt.webm';
-        a.click();
-    };
-
-    recorder.start();
-
-    let duracionTotal = mensajes.reduce((acc, cur) => acc + cur.tiempo, 0) + 2000;
-    setTimeout(() => {
-        recorder.stop();
-        stream.getTracks().forEach(track => track.stop());
-    }, duracionTotal);
 }
 
 window.onload = cargarConversacion;

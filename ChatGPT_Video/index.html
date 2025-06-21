@@ -3,13 +3,23 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Video ChatGPT</title>
+    <title>ChatGPT Clone</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Cabecera como en ChatGPT -->
+    <header id="header">
+        <div class="header-title">ChatGPT</div>
+    </header>
+
+    <!-- Contenedor del chat -->
     <div id="chatContainer"></div>
-    <button onclick="startRecording()">Grabar y Exportar</button>
+
+    <!-- Simulador de input como en ChatGPT -->
+    <div id="inputContainer">
+        <input type="text" id="fakeInput" placeholder="Send a message..." disabled>
+    </div>
 
     <script src="script.js"></script>
 </body>
