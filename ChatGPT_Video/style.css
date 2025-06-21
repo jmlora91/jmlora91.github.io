@@ -1,4 +1,4 @@
-/* Fondo general igual a ChatGPT */
+/* Fondo general */
 body {
     background-color: #343541;
     font-family: 'Arial', sans-serif;
@@ -7,34 +7,55 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px;
+    padding: 16px;
     min-height: 100vh;
 }
 
 /* Contenedor del chat */
 #chatContainer {
-    max-width: 800px;
     width: 100%;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
+    padding-bottom: 50px; /* espacio inferior como ChatGPT */
 }
 
-/* Mensajes genéricos con animación */
+/* Estilo base de todos los mensajes */
 .mensaje {
-    margin: 10px 0;
     opacity: 0;
     transition: opacity 0.5s ease-in;
     word-wrap: break-word;
     white-space: pre-wrap;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-/* Preguntas del usuario (con burbuja tipo ChatGPT) */
+/* Preguntas del usuario con burbuja exacta */
 .user {
     align-self: flex-end;
-    background-color: #3e3f4b; /* Color de burbuja del usuario en ChatGPT */
+    background-color: #3e3f4b;
     color: white;
     padding: 12px 16px;
-    border-radiu
+    border-radius: 8px;
+    max-width: 80%;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Respuestas de ChatGPT sin burbuja, estilo plano */
+.chatgpt {
+    align-self: flex-start;
+    background-color: transparent;
+    color: #d1d5db;
+    padding: 0;
+    max-width: 80%;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Control de aparición */
+.visible {
+    opacity: 1;
+}
