@@ -1,4 +1,4 @@
-#6. Escriba un código que pueda contar todas las palabras mayúsculas de un archivo
+#06. Escriba un código que pueda contar todas las palabras mayúsculas de un archivo
 def contar_palabras_mayusculas(archivo):
     """
     Cuenta el número de palabras en un archivo que están en mayúsculas.

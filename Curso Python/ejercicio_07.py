@@ -1,4 +1,4 @@
-#7. ¿Si la lista 1 es [4, 6, 8, 1, 0, 3], que sería la lista 1 [-1]?
+#07. ¿Si la lista 1 es [4, 6, 8, 1, 0, 3], que sería la lista 1 [-1]?
 #Solución:"-1" siempre se refiere al último índice de la lista, por lo tanto, la respuesta seria 3.
 def get_last_element(lst):
     """

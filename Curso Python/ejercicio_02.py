@@ -1,4 +1,4 @@
-#2. Invertir palabras de una cadena dada.
+#02. Invertir palabras de una cadena dada.
 def invertir_cadena(cadena):
     """
     Invierte una cadena de texto.

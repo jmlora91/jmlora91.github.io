@@ -1,4 +1,4 @@
-#3. Realizar una suma de los elementos de una tupla
+#03. Realizar una suma de los elementos de una tupla
 def suma_tupla(tupla):
     """
     Suma todos los elementos de una tupla numérica.

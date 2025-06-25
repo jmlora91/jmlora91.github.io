@@ -1,4 +1,4 @@
-#8. Escriba un programa para producir la serie Fibonacci en Python.
+#08. Escriba un programa para producir la serie Fibonacci en Python.
 
 def fibonacci(n):
     """

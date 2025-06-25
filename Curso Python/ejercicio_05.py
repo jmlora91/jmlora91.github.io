@@ -1,4 +1,4 @@
-#5. Escriba un código que desordene al azar una lista.
+#05. Escriba un código que desordene al azar una lista.
 
 import random
 

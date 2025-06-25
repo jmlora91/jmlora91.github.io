@@ -1,4 +1,4 @@
-#1. Dados dos números, escriba un código Python para encontrar el mínimo de estos dos números
+#01. Dados dos números, escriba un código Python para encontrar el mínimo de estos dos números
 def encontrar_minimo(num1, num2):
     """
     Encuentra el número mínimo entre dos números.

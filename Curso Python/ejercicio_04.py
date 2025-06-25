@@ -1,4 +1,4 @@
-#4. Escriba un código que calcule una lista de números proporcionados.
+#04. Escriba un código que calcule una lista de números proporcionados.
 def suma_lista(numeros):
     """
     Suma todos los números en una lista.
