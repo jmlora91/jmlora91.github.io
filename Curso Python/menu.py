@@ -6,26 +6,30 @@ from tkinter import ttk, filedialog, messagebox
 import time
 
 class MacButton(tk.Canvas):
+    """Clase que representa un botón personalizado con esquinas redondeadas."""
+    
     def __init__(self, master, text, command=None, width=140, height=100, icon=None, tooltip=None):
+        """Inicializa el botón con texto, comando, tamaño, icono y tooltip."""
         super().__init__(master, width=width, height=height, highlightthickness=0, bg=master["bg"])
         self.command = command
         self.text = text
         self.icon = icon
         self.tooltip = tooltip
         self.configure(cursor="hand2")
-        self.radius = 15
+        self.radius = 15  # Radio para las esquinas redondeadas
         self.padding = 10
-        self.bind("<Button-1>", self.on_click)
-        self.bind("<Enter>", self.on_enter)
-        self.bind("<Leave>", self.on_leave)
-        self.draw_button(normal=True)
+        self.bind("<Button-1>", self.on_click)  # Evento de clic
+        self.bind("<Enter>", self.on_enter)      # Evento al entrar
+        self.bind("<Leave>", self.on_leave)      # Evento al salir
+        self.draw_button(normal=True)            # Dibuja el botón en estado normal
 
         if tooltip:
-            self.tip = ToolTip(self, tooltip)
+            self.tip = ToolTip(self, tooltip)    # Tooltip si se proporciona
         else:
             self.tip = None
 
     def draw_rounded_rect(self, x1, y1, x2, y2, r, **kwargs):
+        """Dibuja un rectángulo con esquinas redondeadas."""
         points = [
             x1+r, y1,
             x1+r, y1,
@@ -51,6 +55,7 @@ class MacButton(tk.Canvas):
         return self.create_polygon(points, smooth=True, **kwargs)
 
     def draw_button(self, normal=True):
+        """Dibuja el botón en su estado normal o presionado."""
         self.delete("all")
         if normal:
             self.draw_rounded_rect(5, 5, 135, 95, self.radius, fill="#e0e0e5", outline="#bfbfc2")
@@ -60,30 +65,37 @@ class MacButton(tk.Canvas):
             self.draw_rounded_rect(0, 0, 130, 90, self.radius, fill="#e6e6e8", outline="#b0b0b3")
 
         if self.icon:
-            self.create_image(65, 30, image=self.icon)
+            self.create_image(65, 30, image=self.icon)  # Dibuja el icono
 
         self.create_text(65, 75, text=self.text, font=("San Francisco", 12, "normal"), fill="#1d1d1f")
 
     def on_click(self, event):
+        """Maneja el evento de clic en el botón."""
         if self.command:
             self.command()
 
     def on_enter(self, event):
+        """Maneja el evento de entrada del mouse sobre el botón."""
         self.draw_button(normal=False)
 
     def on_leave(self, event):
+        """Maneja el evento de salida del mouse del botón."""
         self.draw_button(normal=True)
 
 
 class ToolTip:
+    """Clase para mostrar un tooltip (mensaje emergente) para un widget."""
+    
     def __init__(self, widget, text):
+        """Inicializa el tooltip con el widget asociado y el texto."""
         self.widget = widget
         self.text = text
         self.tipwindow = None
-        self.widget.bind("<Enter>", self.show_tip)
-        self.widget.bind("<Leave>", self.hide_tip)
+        self.widget.bind("<Enter>", self.show_tip)  # Evento para mostrar el tooltip
+        self.widget.bind("<Leave>", self.hide_tip)  # Evento para ocultar el tooltip
 
     def show_tip(self, event=None):
+        """Muestra el tooltip en la posición del mouse."""
         if self.tipwindow or not self.text:
             return
         x = self.widget.winfo_rootx() + 20
@@ -97,6 +109,7 @@ class ToolTip:
         label.pack(ipadx=5, ipady=3)
 
     def hide_tip(self, event=None):
+        """Oculta el tooltip."""
         tw = self.tipwindow
         self.tipwindow = None
         if tw:
@@ -104,7 +117,10 @@ class ToolTip:
 
 
 class App(tk.Tk):
+    """Clase principal de la aplicación que hereda de Tkinter."""
+    
     def __init__(self):
+        """Inicializa la aplicación y configura la ventana principal."""
         super().__init__()
         self.title("Ejecutor de Scripts Python")
         self.geometry("700x500")
@@ -121,7 +137,7 @@ class App(tk.Tk):
 
         self.ruta_base = ""
 
-        self.crear_menu()
+        self.crear_menu()  # Crea el menú de la aplicación
 
         self.frame_scripts = tk.Frame(self, bg="#f0f0f5")
         self.frame_scripts.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
@@ -156,9 +172,10 @@ class App(tk.Tk):
 
         self.botones_scripts = []
 
-        self.seleccionar_carpeta()
+        self.seleccionar_carpeta()  # Selecciona la carpeta al iniciar
 
     def crear_menu(self):
+        """Crea el menú de la aplicación."""
         menubar = tk.Menu(self)
         self.config(menu=menubar)
 
@@ -169,17 +186,19 @@ class App(tk.Tk):
         menubar.add_cascade(label="Archivo", menu=archivo_menu)
 
     def seleccionar_carpeta(self):
+        """Permite al usuario seleccionar una carpeta que contenga scripts Python."""
         ruta = tk.filedialog.askdirectory(title="Selecciona la carpeta con scripts Python")
         if ruta:
             self.ruta_base = ruta
             self.status_var.set(f"Carpeta seleccionada: {ruta}")
-            self.cargar_scripts()
+            self.cargar_scripts()  # Carga los scripts de la carpeta seleccionada
         else:
             self.status_var.set("No se seleccionó ninguna carpeta")
 
     def cargar_scripts(self):
+        """Carga los scripts Python de la carpeta seleccionada y crea botones para ejecutarlos."""
         for btn in self.botones_scripts:
-            btn.destroy()
+            btn.destroy()  # Destruye botones existentes
         self.botones_scripts.clear()
 
         if not self.ruta_base:
@@ -192,7 +211,7 @@ class App(tk.Tk):
 
         self.status_var.set(f"{len(archivos)} archivos encontrados")
 
-        columnas = 4
+        columnas = 4  # Número de columnas para los botones
         for idx, archivo in enumerate(archivos):
             fila = idx // columnas
             columna = idx % columnas
@@ -210,6 +229,7 @@ class App(tk.Tk):
             self.scrollable_frame.grid_columnconfigure(col, weight=1)
 
     def ejecutar_archivo(self, archivo):
+        """Ejecuta el archivo Python seleccionado en una terminal."""
         ruta = os.path.join(self.ruta_base, archivo)
         self.status_var.set(f"Ejecutando {archivo}...")
 
@@ -232,5 +252,5 @@ class App(tk.Tk):
             messagebox.showerror("Error", f"No se pudo ejecutar {archivo}:\n{e}")
 
 if __name__ == "__main__":
-    app = App()
+    app = App()  # Crea y ejecuta la aplicación
     app.mainloop()
