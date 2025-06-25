@@ -1168,6 +1168,357 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant m
         </code></pre>
       </div>
 
+      <div class="actividad" id="actividad13">
+        <h2>Actividad 13:</h2>
+  
+        <h3>📝 Enunciado</h3>
+        <p>Cite las etiquetas y atributos que se necesitan para insertar imágenes y elementos multimedia en un sitio web, y explique cómo se insertaría un video de Youtube.</p>
+  
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <h1>Inserción de Imágenes y Elementos Multimedia en HTML</h1>
+  
+      <h2>1. Imágenes</h2>
+      <p>
+        Para insertar imágenes en un sitio web se usa la etiqueta <code>&lt;img&gt;</code>. 
+        Los atributos principales que se utilizan son:
+      </p>
+      <ul>
+        <li><code>src</code>: indica la ruta o URL de la imagen.</li>
+        <li><code>alt</code>: texto alternativo que describe la imagen para accesibilidad.</li>
+        <li><code>width</code> y <code>height</code>: establecen el tamaño de la imagen en píxeles (opcional).</li>
+      </ul>
+      <p>Ejemplo práctico:</p>
+      <img src="repertorio.png" alt="Imagen de ejemplo" width="150" height="150">
+      
+      <hr>
+      
+      <h2>2. Videos locales (archivos propios)</h2>
+      <p>
+        Para insertar videos propios almacenados localmente se usa la etiqueta <code>&lt;video&gt;</code> con estos atributos principales:
+      </p>
+      <ul>
+        <li><code>src</code>: ruta o URL del archivo de video.</li>
+        <li><code>controls</code>: muestra controles para reproducir, pausar, etc.</li>
+        <li><code>width</code> y <code>height</code>: tamaño del reproductor de video.</li>
+      </ul>
+      <video src="AMENcarnación.mp4" controls width="320" height="240"></video>
+      
+      <hr>
+      
+      <h2>3. Videos de YouTube (contenido externo)</h2>
+      <p>
+        Para insertar videos de YouTube o cualquier otro contenido multimedia externo se usa la etiqueta <code>&lt;iframe&gt;</code>, que permite embeber el video directamente en la página.
+      </p>
+      <ul>
+        <li><code>src</code>: URL del video en modo "embed" de YouTube.</li>
+        <li><code>width</code> y <code>height</code>: tamaño del reproductor.</li>
+        <li><code>frameborder="0"</code>: elimina el borde del iframe (opcional).</li>
+        <li><code>allowfullscreen</code>: permite que el video se vea en pantalla completa.</li>
+      </ul>
+      <iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/zdjloEXLOEw?si=3lF5ITe-odgDqPSr" 
+      frameborder="0" allowfullscreen></iframe>
+        </div>
+  
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+          &lt;h1&gt;Inserción de Imágenes y Elementos Multimedia en HTML&lt;/h1&gt;
+  
+      &lt;h2&gt;1. Imágenes&lt;/h2&gt;
+      &lt;p&gt;
+        Para insertar imágenes en un sitio web se usa la etiqueta &lt;code&gt;&lt;img&gt;&lt;/code&gt;. 
+        Los atributos principales que se utilizan son:
+      &lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;code&gt;src&lt;/code&gt;: indica la ruta o URL de la imagen.&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;alt&lt;/code&gt;: texto alternativo que describe la imagen para accesibilidad.&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;width&lt;/code&gt; y &lt;code&gt;height&lt;/code&gt;: establecen el tamaño de la imagen en píxeles (opcional).&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;Ejemplo práctico:&lt;/p&gt;
+      &lt;img src="repertorio.png" alt="Imagen de ejemplo" width="150" height="150"&gt;
+      
+      &lt;hr&gt;
+      
+      &lt;h2&gt;2. Videos locales (archivos propios)&lt;/h2&gt;
+      &lt;p&gt;
+        Para insertar videos propios almacenados localmente se usa la etiqueta &lt;code&gt;&lt;video&gt;&lt;/code&gt; con estos atributos principales:
+      &lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;code&gt;src&lt;/code&gt;: ruta o URL del archivo de video.&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;controls&lt;/code&gt;: muestra controles para reproducir, pausar, etc.&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;width&lt;/code&gt; y &lt;code&gt;height&lt;/code&gt;: tamaño del reproductor de video.&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;video src="AMENcarnación.mp4" controls width="320" height="240"&gt;&lt;/video&gt;
+      
+      &lt;hr&gt;
+      
+      &lt;h2&gt;3. Videos de YouTube (contenido externo)&lt;/h2&gt;
+      &lt;p&gt;
+        Para insertar videos de YouTube o cualquier otro contenido multimedia externo se usa la etiqueta &lt;code&gt;&lt;iframe&gt;&lt;/code&gt;, que permite embeber el video directamente en la página.
+      &lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;code&gt;src&lt;/code&gt;: URL del video en modo "embed" de YouTube.&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;width&lt;/code&gt; y &lt;code&gt;height&lt;/code&gt;: tamaño del reproductor.&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;frameborder="0"&lt;/code&gt;: elimina el borde del iframe (opcional).&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;allowfullscreen&lt;/code&gt;: permite que el video se vea en pantalla completa.&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/zdjloEXLOEw?si=3lF5ITe-odgDqPSr" 
+      frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+        </code></pre>
+      </div>
+
+      <div class="actividad" id="actividad14">
+        <h2>Actividad 14:</h2>
+    
+        <h3>📝 Enunciado</h3>
+        <p>1. Desarrolle una página web que va a tener imágenes.
+    
+    a. Inserte una imagen de un cangrejo que esté en la carpeta “img” junto a la página web. Deberá incluir un texto alternativo para facilitar su accesibilidad.
+    
+    b. Debajo de la imagen anterior se debe insertar la misma imagen pero mostrada a un tamaño menor del real.
+    
+    c. Inserte una imagen de una pelota, que además será un enlace a alguna página web de deportes. La imagen debe ser tomada de internet, utilizando una ruta absoluta.
+    
+    d. Cite las etiquetas y atributos que son necesarios para insertar</p>
+    
+        <h3>✅ Resultado</h3>
+        <div class="resultado">
+          <h1>Ejemplo de Inserción de Imágenes en HTML</h1>
+    
+    <h2>a. Imagen de un cangrejo con texto alternativo</h2>
+    <p>Se utiliza la etiqueta <code>&lt;img&gt;</code> con los atributos <code>src</code> (ruta de la imagen) y <code>alt</code> (texto alternativo para accesibilidad).</p>
+    <p>Ejemplo:</p>
+    <img src="img/cangrejo.png" alt="Imagen de un cangrejo">
+    
+    <hr>
+    
+    <h2>b. La misma imagen pero en tamaño reducido</h2>
+    <p>Para cambiar el tamaño de la imagen, se utilizan los atributos <code>width</code> y <code>height</code>.</p>
+    <p>Ejemplo:</p>
+    <img src="img/cangrejo.png" alt="Imagen de un cangrejo pequeña" width="150" height="150">
+    
+    <hr>
+    
+    <h2>c. Imagen de una pelota que es un enlace</h2>
+    <p>Para hacer clic en una imagen y que te lleve a otra página, se usa la etiqueta <code>&lt;a&gt;</code> y dentro de ella la etiqueta <code>&lt;img&gt;</code>.</p>
+    <p>En este caso, la imagen se obtiene desde internet usando una ruta absoluta (una URL completa).</p>
+    <p>Ejemplo:</p>
+    <a href="https://www.marca.com" target="_blank">
+        <img src="https://phantom-marca.unidadeditorial.es/e529592caf01cbd3db5fa6e028cc6281/resize/1320/f/webp/assets/multimedia/imagenes/2023/07/04/16884823852932.jpg" alt="Pelota de fútbol" width="150" height="150">
+    </a>
+    
+    <hr>
+    
+    <h2>d. Explicación de etiquetas y atributos necesarios para insertar imágenes</h2>
+    <ul>
+        <li><strong>Etiqueta:</strong> <code>&lt;img&gt;</code></li>
+        <li><strong>Atributos necesarios:</strong>
+            <ul>
+                <li><code>src</code>: Define la ruta de la imagen (puede ser relativa o absoluta).</li>
+                <li><code>alt</code>: Proporciona un texto alternativo para accesibilidad y en caso de que la imagen no se cargue.</li>
+                <li><code>width</code>: Establece el ancho de la imagen en píxeles.</li>
+                <li><code>height</code>: Establece la altura de la imagen en píxeles.</li>
+            </ul>
+        </li>
+        <li><strong>Para convertir una imagen en enlace:</strong> Se utiliza la etiqueta <code>&lt;a&gt;</code> y dentro se coloca la etiqueta <code>&lt;img&gt;</code>.</li>
+    </ul>
+        </div>
+    
+        <h3>💻 Código</h3>
+        <pre><code class="language-html">
+          &lt;h1&gt;Ejemplo de Inserción de Imágenes en HTML&lt;/h1&gt;
+    
+    &lt;h2&gt;a. Imagen de un cangrejo con texto alternativo&lt;/h2&gt;
+    &lt;p&gt;Se utiliza la etiqueta &lt;code&gt;&lt;img&gt;&lt;/code&gt; con los atributos &lt;code&gt;src&lt;/code&gt; (ruta de la imagen) y &lt;code&gt;alt&lt;/code&gt; (texto alternativo para accesibilidad).&lt;/p&gt;
+    &lt;p&gt;Ejemplo:&lt;/p&gt;
+    &lt;img src="img/cangrejo.png" alt="Imagen de un cangrejo"&gt;
+    
+    &lt;hr&gt;
+    
+    &lt;h2&gt;b. La misma imagen pero en tamaño reducido&lt;/h2&gt;
+    &lt;p&gt;Para cambiar el tamaño de la imagen, se utilizan los atributos &lt;code&gt;width&lt;/code&gt; y &lt;code&gt;height&lt;/code&gt;.&lt;/p&gt;
+    &lt;p&gt;Ejemplo:&lt;/p&gt;
+    &lt;img src="img/cangrejo.png" alt="Imagen de un cangrejo pequeña" width="150" height="150"&gt;
+    
+    &lt;hr&gt;
+    
+    &lt;h2&gt;c. Imagen de una pelota que es un enlace&lt;/h2&gt;
+    &lt;p&gt;Para hacer clic en una imagen y que te lleve a otra página, se usa la etiqueta &lt;code&gt;&lt;a&gt;&lt;/code&gt; y dentro de ella la etiqueta &lt;code&gt;&lt;img&gt;&lt;/code&gt;.&lt;/p&gt;
+    &lt;p&gt;En este caso, la imagen se obtiene desde internet usando una ruta absoluta (una URL completa).&lt;/p&gt;
+    &lt;p&gt;Ejemplo:&lt;/p&gt;
+    &lt;a href="https://www.marca.com" target="_blank"&gt;
+        &lt;img src="https://phantom-marca.unidadeditorial.es/e529592caf01cbd3db5fa6e028cc6281/resize/1320/f/webp/assets/multimedia/imagenes/2023/07/04/16884823852932.jpg" alt="Pelota de fútbol" width="150" height="150"&gt;
+    &lt;/a&gt;
+    
+    &lt;hr&gt;
+    
+    &lt;h2&gt;d. Explicación de etiquetas y atributos necesarios para insertar imágenes&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;strong&gt;Etiqueta:&lt;/strong&gt; &lt;code&gt;&lt;img&gt;&lt;/code&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;strong&gt;Atributos necesarios:&lt;/strong&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;code&gt;src&lt;/code&gt;: Define la ruta de la imagen (puede ser relativa o absoluta).&lt;/li&gt;
+                &lt;li&gt;&lt;code&gt;alt&lt;/code&gt;: Proporciona un texto alternativo para accesibilidad y en caso de que la imagen no se cargue.&lt;/li&gt;
+                &lt;li&gt;&lt;code&gt;width&lt;/code&gt;: Establece el ancho de la imagen en píxeles.&lt;/li&gt;
+                &lt;li&gt;&lt;code&gt;height&lt;/code&gt;: Establece la altura de la imagen en píxeles.&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;strong&gt;Para convertir una imagen en enlace:&lt;/strong&gt; Se utiliza la etiqueta &lt;code&gt;&lt;a&gt;&lt;/code&gt; y dentro se coloca la etiqueta &lt;code&gt;&lt;img&gt;&lt;/code&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+        </code></pre>
+        </div>
+
+        <div class="actividad" id="actividad15">
+          <h2>Actividad 15:</h2>
+      
+          <h3>📝 Enunciado</h3>
+          <p>1. Cree una galería de 4 imágenes que estarán alineadas horizontalmente. Se mostrarán en la página principal versiones reducidas de las imágenes originales, todas del mismo tamaño, y cuando se pulse en alguna imagen se abrirá la imagen original con su tamaño real. Las imágenes estarán en una carpeta por lo que se utilizará una ruta relativa para enlazarlas.</p>
+      
+          <h3>✅ Resultado</h3>
+          <div class="resultado">
+            <h1>Galería de Imágenes</h1>
+          <p>Haz clic en cualquier imagen para verla en tamaño real.</p>
+          
+          <!-- Galería -->
+          <a href="img/hormiga1.png" target="_blank">
+              <img src="img/hormiga1.png" alt="Imagen 1" width="150" height="100">
+          </a>
+          <a href="img/hormiga2.png" target="_blank">
+              <img src="img/hormiga2.png" alt="Imagen 2" width="150" height="100">
+          </a>
+          <a href="img/hormiga3.png" target="_blank">
+              <img src="img/hormiga3.png" alt="Imagen 3" width="150" height="100">
+          </a>
+          <a href="img/hormiga4.png" target="_blank">
+              <img src="img/hormiga4.png" alt="Imagen 4" width="150" height="100">
+          </a>
+          </div>
+      
+          <h3>💻 Código</h3>
+          <pre><code class="language-html">
+            &lt;h1&gt;Galería de Imágenes&lt;/h1&gt;
+          &lt;p&gt;Haz clic en cualquier imagen para verla en tamaño real.&lt;/p&gt;
+          
+          &lt;!-- Galería --&gt;
+          &lt;a href="img/hormiga1.png" target="_blank"&gt;
+              &lt;img src="img/hormiga1.png" alt="Imagen 1" width="150" height="100"&gt;
+          &lt;/a&gt;
+          &lt;a href="img/hormiga2.png" target="_blank"&gt;
+              &lt;img src="img/hormiga2.png" alt="Imagen 2" width="150" height="100"&gt;
+          &lt;/a&gt;
+          &lt;a href="img/hormiga3.png" target="_blank"&gt;
+              &lt;img src="img/hormiga3.png" alt="Imagen 3" width="150" height="100"&gt;
+          &lt;/a&gt;
+          &lt;a href="img/hormiga4.png" target="_blank"&gt;
+              &lt;img src="img/hormiga4.png" alt="Imagen 4" width="150" height="100"&gt;
+          &lt;/a&gt;
+          </code></pre>
+          </div>
+
+          <div class="actividad" id="actividad16">
+            <h2>Actividad 16:</h2>
+        
+            <h3>📝 Enunciado</h3>
+            <p>Cree un mapa de imagen que sea un cuadrado dividido en cuatro cuadrados de colores. Si se pincha en cada uno de los colores se debe abrir un enlace diferente.</p>
+        
+            <h3>✅ Resultado</h3>
+            <div class="resultado">
+              <img src="img/cuadro_colores.png" alt="Cuadro de colores" usemap="#mapacolores" width="900" height="675">
+            
+            <map name="mapacolores">
+                <!-- Área superior izquierda -->
+                <area shape="rect" coords="0,0,450,338" href="https://developer.mozilla.org/es/docs/Web/HTML" alt="Cuadro 1 HTML">
+        
+                <!-- Área superior derecha -->
+                <area shape="rect" coords="450,0,900,338" href="https://lenguajecss.com" alt="Cuadro 2 CSS">
+        
+                <!-- Área inferior izquierda -->
+                <area shape="rect" coords="0,338,450,675" href="https://lenguajejs.com/javascript/" alt="Cuadro 3 JAVASCRIPT">
+        
+                <!-- Área inferior derecha -->
+                <area shape="rect" coords="450,338,900,675" href="https://www.php.net" alt="Cuadro 4 PHP">
+            </map>
+            </div>
+        
+            <h3>💻 Código</h3>
+            <pre><code class="language-html">
+              &lt;img src="img/cuadro_colores.png" alt="Cuadro de colores" usemap="#mapacolores" width="900" height="675"&gt;
+            
+            &lt;map name="mapacolores"&gt;
+                &lt;!-- Área superior izquierda --&gt;
+                &lt;area shape="rect" coords="0,0,450,338" href="https://developer.mozilla.org/es/docs/Web/HTML" alt="Cuadro 1 HTML"&gt;
+        
+                &lt;!-- Área superior derecha --&gt;
+                &lt;area shape="rect" coords="450,0,900,338" href="https://lenguajecss.com" alt="Cuadro 2 CSS"&gt;
+        
+                &lt;!-- Área inferior izquierda --&gt;
+                &lt;area shape="rect" coords="0,338,450,675" href="https://lenguajejs.com/javascript/" alt="Cuadro 3 JAVASCRIPT"&gt;
+        
+                &lt;!-- Área inferior derecha --&gt;
+                &lt;area shape="rect" coords="450,338,900,675" href="https://www.php.net" alt="Cuadro 4 PHP"&gt;
+            &lt;/map&gt;
+            </code></pre>
+            </div>
+
+            <div class="actividad" id="actividad17">
+              <h2>Actividad 17:</h2>
+          
+              <h3>📝 Enunciado</h3>
+              <p>Desarrolle una página web donde se inserte un video de Youtube y también un archivo de audio mp3 que esté en el disco.</p>
+          
+              <h3>✅ Resultado</h3>
+              <div class="resultado">
+                <h1>Ejemplo de Inserción de Video y Audio</h1>
+          
+              <!-- Video de YouTube -->
+              <h2>Video de YouTube</h2>
+              <p>A continuación se muestra un video insertado desde YouTube:</p>
+              
+              <iframe width="560" height="315" 
+              src="https://www.youtube.com/embed/zdjloEXLOEw?si=3lF5ITe-odgDqPSr" 
+              frameborder="0" allowfullscreen></iframe>
+              
+              <hr>
+              
+              <!-- Audio local -->
+              <h2>Audio Local (MP3)</h2>
+              <p>A continuación se reproduce un archivo de audio que está guardado localmente en la carpeta del proyecto:</p>
+              
+              <audio src="audio/01 Spanish.mp3" controls></audio>
+              </div>
+          
+              <h3>💻 Código</h3>
+              <pre><code class="language-html">
+                &lt;h1&gt;Ejemplo de Inserción de Video y Audio&lt;/h1&gt;
+          
+              &lt;!-- Video de YouTube --&gt;
+              &lt;h2&gt;Video de YouTube&lt;/h2&gt;
+              &lt;p&gt;A continuación se muestra un video insertado desde YouTube:&lt;/p&gt;
+              
+              &lt;iframe width="560" height="315" 
+              src="https://www.youtube.com/embed/zdjloEXLOEw?si=3lF5ITe-odgDqPSr" 
+              frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+              
+              &lt;hr&gt;
+              
+              &lt;!-- Audio local --&gt;
+              &lt;h2&gt;Audio Local (MP3)&lt;/h2&gt;
+              &lt;p&gt;A continuación se reproduce un archivo de audio que está guardado localmente en la carpeta del proyecto:&lt;/p&gt;
+              
+              &lt;audio src="audio/01 Spanish.mp3" controls&gt;&lt;/audio&gt;
+              </code></pre>
+              </div>
+          
+
+  
+  
+
+      
+  
+  
+
 
 
       
