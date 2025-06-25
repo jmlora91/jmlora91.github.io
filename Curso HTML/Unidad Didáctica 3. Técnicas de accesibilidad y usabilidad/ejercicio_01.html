@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jose Manuel Lora Mora - Ejercicio 01</title>
+    <!-- Autor de la página -->
+    <meta name="author" content="Jose Manuel Lora Mora">
+    <!-- Descripción para motores de búsqueda -->
+    <meta name="description" content="Esto es un ejercicio del curso">
+    <!-- Codificación de caracteres -->
+    <meta charset="UTF-8">
+</head>
+<body>
+        <h1>Soluciones a Problemas de Accesibilidad</h1>
+    
+        <h2>a. Uso de atributos que no existen en la versión de HTML declarada</h2>
+        <p>Se debe revisar la versión de HTML declarada en el <code>&lt;!DOCTYPE&gt;</code> y utilizar solo los atributos válidos para esa versión.</p>
+    
+        <h2>b. Falta de texto alternativo en elementos no textuales</h2>
+        <p>Se debe proporcionar el atributo <code>alt</code> en todas las imágenes y elementos no textuales.</p>
+        <p>Ejemplo:</p>
+        <img src="imagen.jpg" alt="Descripción de la imagen">
+    
+        <h2>c. Problemas de contraste y visibilidad cuando las imágenes no se cargan</h2>
+        <p>Se debe garantizar que el texto sea legible sin depender de imágenes de fondo y con suficiente contraste.</p>
+        <p>Ejemplo de texto visible sin depender de la imagen:</p>
+        <p>Opción del menú: Inicio</p>
+    
+        <h2>d. Formularios maquetados con tablas</h2>
+        <p>No se deben usar tablas para maquetar formularios. Se deben usar etiquetas de formulario directamente.</p>
+        <p>Ejemplo correcto:</p>
+        <form action="procesar.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br>
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email"><br>
+            <input type="submit" value="Enviar">
+        </form>
+    
+        <h2>e. Uso de animaciones en Flash</h2>
+        <p>No se debe usar contenido en Flash. Se debe sustituir por contenido accesible y compatible con HTML5.</p>
+    
+        <h2>f. Vídeo sin subtítulos</h2>
+        <p>Los vídeos deben tener subtítulos disponibles.</p>
+        <p>Ejemplo correcto:</p>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español">
+            El navegador no soporta el vídeo.
+        </video>
+    
+        <h2>g. Navegación con teclado no disponible</h2>
+        <p>Se debe permitir que todos los elementos interactivos sean accesibles con el teclado mediante el atributo <code>tabindex</code> y un orden lógico.</p>
+        <p>Ejemplo:</p>
+        <a href="pagina1.html" tabindex="1">Página 1</a><br>
+        <a href="pagina2.html" tabindex="2">Página 2</a><br>
+        <a href="pagina3.html" tabindex="3">Página 3</a><br>
+    
+    
+</body>
+</html>

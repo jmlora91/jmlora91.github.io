@@ -1,0 +1,227 @@
+This CSS file styles a virtual keyboard interface and a sidebar menu. 
+
+Classes:
+- .teclado: Styles the keyboard container with flex layout and background color.
+- .fila: Styles each row of keys in the keyboard.
+- .tecla: Styles individual keys with borders, shadows, and hover effects.
+- .tecla.wide: Modifies the width of a key to be wider.
+- .tecla.space: Modifies the width of a key to be a space bar.
+- :root: Defines CSS variables for light and dark themes.
+- body.dark: Overrides CSS variables for dark mode styling.
+- body: Styles the main body with font, margin, and background color.
+- .menu: Styles the sidebar menu with fixed positioning and background color.
+- .menu h2: Styles the heading in the menu.
+- .menu input: Styles input fields in the menu.
+- .menu a: Styles links in the menu with hover effects.
+- .contenido: Styles the main content area with padding and margin.
+- .actividad: Styles activity cards with background and shadow.
+- .resultado: Styles result boxes with padding and background.
+- .switch-container: Styles the switch container for toggles.
+- .switch-label: Styles the label for switches.
+- .switch: Styles the switch component.
+- .slider: Styles the slider for the switch.
+- input:checked + .slider: Changes the slider background when checked.
+- input:checked + .slider:before: Moves the slider knob when checked.
+*/
+.teclado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e0e0e0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  .fila {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  .tecla {
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow: 0 4px #666;
+    background: #f2f2f2;
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.1s;
+  }
+  .tecla.wide { width: 80px; }
+  .tecla.space { width: 300px; }
+  .tecla:active,
+  .tecla.pulsada {
+    box-shadow: 0 2px #444;
+    transform: translateY(2px);
+    background: #d9d9d9;
+  }
+
+    :root {
+      --bg-color: #fefefe;
+      --text-color: #1c1c1e;
+      --card-bg: #ffffff;
+      --menu-bg: #f2f2f7;
+      --menu-text: #1c1c1e;
+      --menu-link: #007aff;
+      --menu-link-hover: #004fbf;
+      --resultado-bg: #f5f5f5;
+    }
+
+    body.dark {
+      --bg-color: #000000;
+      --text-color: #f2f2f7;
+      --card-bg: #1c1c1e;
+      --menu-bg: #121212;
+      --menu-text: #f2f2f7;
+      --menu-link: #0a84ff;
+      --menu-link-hover: #66aaff;
+      --resultado-bg: #2c2c2e;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    /* Menú lateral estilo limpio */
+    .menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 240px;
+      height: 100vh;
+      background: var(--menu-bg);
+      color: var(--menu-text);
+      padding: 1.5rem;
+      box-shadow: -2px 0 12px rgba(0, 0, 0, 0.05);
+      overflow-y: auto;
+      border-left: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .menu h2 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .menu input {
+      background: #e5e5ea;
+      border: none;
+      border-radius: 12px;
+      padding: 8px 12px;
+      width: 100%;
+      font-size: 14px;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .menu input:focus {
+      outline: 2px solid #007aff;
+    }
+
+    .menu a {
+      display: block;
+      margin: 0.4rem 0;
+      color: var(--menu-link);
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 15px;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .menu a:hover {
+      background-color: rgba(0, 122, 255, 0.1);
+      color: var(--menu-link-hover);
+    }
+
+    /* Contenido */
+    .contenido {
+      flex: 1;
+      margin-right: 260px;
+      padding: 2rem;
+    }
+
+    .actividad {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: background 0.3s ease;
+    }
+
+    .resultado {
+      padding: 1rem;
+      background: var(--resultado-bg);
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    /* Switch estilo iPhone */
+    .switch-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 3rem auto;
+    }
+
+    .switch-label {
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 52px;
+      height: 30px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: background-color 0.3s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 22px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: transform 0.3s;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    input:checked + .slider {
+      background-color: #34c759;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(22px);
+    }

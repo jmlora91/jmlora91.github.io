@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jose Manuel Lora Mora - Ejercicio XXX</title>
+    <!-- Autor de la página -->
+    <meta name="author" content="Jose Manuel Lora Mora">
+    <!-- Descripción para motores de búsqueda -->
+    <meta name="description" content="Esto es un ejercicio del curso">
+    <!-- Codificación de caracteres -->
+    <meta charset="UTF-8">
+</head>
+<body>
+    
+        <h1>Corrección de Errores de Accesibilidad</h1>
+    
+        <h2>Errores encontrados en Google</h2>
+    
+        <h3>1. Imágenes sin atributo alt</h3>
+        <p>Ejemplo incorrecto:</p>
+        <img src="logo.png">
+        <p>Ejemplo corregido:</p>
+        <img src="logo.png" alt="Logo de Google">
+    
+        <h3>2. Formularios sin etiqueta label</h3>
+        <p>Ejemplo incorrecto:</p>
+        <form>
+            <input type="text" name="busqueda">
+            <input type="submit" value="Buscar">
+        </form>
+    
+        <p>Ejemplo corregido:</p>
+        <form>
+            <label for="busqueda">Buscar:</label>
+            <input type="text" id="busqueda" name="busqueda">
+            <input type="submit" value="Buscar">
+        </form>
+    
+        <h3>3. Faltan encabezados h1</h3>
+        <p>Ejemplo corregido:</p>
+        <h1>Página Principal de Google</h1>
+    
+        <h3>4. Contraste de enlaces</h3>
+        <p>Se debe usar un color de texto con suficiente contraste sobre el fondo. Ejemplo corregido:</p>
+        <p><a href="pagina.html" style="color: #0000FF;">Enlace accesible</a></p>
+    
+        <h3>5. Navegación con teclado</h3>
+        <p>Ejemplo correcto con tabindex:</p>
+        <a href="pagina1.html" tabindex="1">Página 1</a><br>
+        <a href="pagina2.html" tabindex="2">Página 2</a><br>
+    
+        <h2>Errores encontrados en 20minutos.es</h2>
+    
+        <h3>1. Enlaces sin atributo title</h3>
+        <p>Ejemplo incorrecto:</p>
+        <a href="noticia.html">Leer más</a>
+    
+        <p>Ejemplo corregido:</p>
+        <a href="noticia.html" title="Leer más sobre la noticia">Leer más</a>
+    
+        <h3>2. Imágenes sin atributo alt</h3>
+        <p>Ejemplo incorrecto:</p>
+        <img src="imagen-noticia.jpg">
+    
+        <p>Ejemplo corregido:</p>
+        <img src="imagen-noticia.jpg" alt="Imagen relacionada con la noticia">
+    
+        <h3>3. Estructura de encabezados incorrecta</h3>
+        <p>Ejemplo incorrecto:</p>
+        <h1>Noticias</h1>
+        <h3>Política</h3>
+    
+        <p>Ejemplo corregido:</p>
+        <h1>Noticias</h1>
+        <h2>Política</h2>
+    
+        <h3>4. Orden de tabulación</h3>
+        <p>Ejemplo correcto con tabindex:</p>
+        <a href="inicio.html" tabindex="1">Inicio</a><br>
+        <a href="politica.html" tabindex="2">Política</a><br>
+        <a href="deportes.html" tabindex="3">Deportes</a><br>
+    
+        <h3>5. Contraste de colores</h3>
+        <p>Ejemplo corregido:</p>
+        <p style="color: #000000;">Texto en negro sobre fondo blanco para mejor legibilidad.</p>
+        
+</body>
+</html>
