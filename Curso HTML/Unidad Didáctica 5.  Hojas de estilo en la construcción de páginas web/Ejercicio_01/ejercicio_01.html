@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Separación de contenido y presentación con CSS</title>
+
+  <!-- CSS Incrustado -->
+  <style>
+    h1 {
+      font-size: 50px;
+      color: blue;
+      font-family: Verdana;
+    }
+
+    h2 {
+      font-size: 30px;
+      color: red;
+      font-family: Arial;
+    }
+
+    p {
+      font-size: 20px;
+      color: yellow;
+      font-family: Arial;
+      background: black;
+    }
+
+    section {
+      margin-top: 30px;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      overflow-x: auto;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css"> <!-- Enlace a archivo CSS externo -->
+</head>
+<body>
+
+  <h1>Titular de la página</h1>
+  <h2>Subtítulo de la página</h2>
+  <p>Un párrafo de texto como otro cualquiera.</p>
+
+  <section>
+    <h2>a) Ubicar las reglas CSS de forma incrustada dentro del documento html.</h2>
+    <pre>
+        &lt;head&gt;
+            &lt;style&gt;
+                h1 {
+                font-size: 50px;
+                color: blue;
+                font-family: Verdana;
+                }
+            
+                h2 {
+                font-size: 30px;
+                color: red;
+                font-family: Arial;
+                }
+            
+                p {
+                font-size: 20px;
+                color: yellow;
+                font-family: Arial;
+                background: black;
+                }
+            
+                section {
+                margin-top: 30px;
+                }
+            
+                pre {
+                background: #f4f4f4;
+                padding: 10px;
+                overflow-x: auto;
+                }
+            
+                body {
+                font-family: sans-serif;
+                margin: 20px;
+                }
+                &lt;/style&gt;
+            &lt;/head&gt;
+    </pre>
+  </section>
+
+  <section>
+    <h2>b) Crear un archivo CSS independiente y enlazarlo con el documento html.</h2>
+    <pre>
+        &lt;head&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt; <!-- Enlace a archivo CSS externo -->
+        &lt;/head&gt;
+    </pre>
+  </section>
+
+  <section>
+    <h2>c) ¿Cuáles son las ventajas de usar las hojas de estilo?</h2>
+    <ul>
+      <li>Separación entre contenido (HTML) y presentación (CSS).</li>
+      <li>Reutilización de estilos en múltiples páginas.</li>
+      <li>Fácil mantenimiento y edición del diseño.</li>
+      <li>Diseño coherente en todo el sitio web.</li>
+      <li>Mejora el rendimiento del sitio (caché de archivos CSS).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>d) ¿Cuáles son las distintas formas en que se pueden utilizar las hojas de estilo?</h2>
+    <ol>
+      <li><strong>En línea:</strong> dentro de las etiquetas HTML con el atributo <code>style</code>.</li>
+      <li><strong>Incrustada:</strong> dentro de una etiqueta <code>&lt;style&gt;</code> en el <code>&lt;head&gt;</code>.</li>
+      <li><strong>Externa:</strong> en un archivo CSS separado enlazado con <code>&lt;link&gt;</code>.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>e) Partes y sintaxis de una hoja de estilos</h2>
+    <p>Una hoja de estilo tiene la siguiente estructura:</p>
+    <pre>
+selector {
+  propiedad: valor;
+  propiedad2: valor2;
+}
+    </pre>
+    <p>Ejemplo:</p>
+    <pre>
+h1 {
+  font-size: 50px;
+  color: blue;
+}
+    </pre>
+    <ul>
+      <li><strong>Selector:</strong> indica qué elementos HTML se van a afectar (ej. <code>h1</code>).</li>
+      <li><strong>Propiedad:</strong> define el aspecto a modificar (ej. <code>color</code>).</li>
+      <li><strong>Valor:</strong> es el valor que se le asigna a la propiedad (ej. <code>blue</code>).</li>
+    </ul>
+  </section>
+
+</body>
+</html>

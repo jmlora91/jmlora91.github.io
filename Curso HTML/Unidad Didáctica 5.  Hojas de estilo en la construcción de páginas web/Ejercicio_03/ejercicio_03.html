@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Enlaces en HTML</title>
+
+  <style>
+    /* a. Enlace por defecto 
+    El color por defecto del enlace sea amarillo con fondo azul.
+    */
+    a:link {
+      color: yellow;
+      background-color: blue;
+      text-decoration: none;
+      padding: 5px;
+      display: inline-block;
+    }
+
+    /* b. Al pasar el ratón por encima 
+     Al pasar el ratón por encima el color del enlace sea negro y la letra esté en negrita y el fondo amarillo.
+     */
+    a:hover {
+      color: black;
+      background-color: yellow;
+      font-weight: bold;
+    }
+
+    /* c. Enlace visitado 
+    Cuando un enlace haya sido visitado el enlace aparecerá de color rojo y con fondo blanco.
+    */
+    a:visited {
+      color: red;
+      background-color: white;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1>Mis enlaces favoritos</h1>
+  
+  <a href="https://www.google.com" target="_blank">Ir a Google</a>
+  <a href="https://es.wikipedia.org" target="_blank">Ir a Wikipedia</a>
+  <a href="https://www.youtube.com" target="_blank">Ir a YouTube</a>
+
+
+</body>
+</html>

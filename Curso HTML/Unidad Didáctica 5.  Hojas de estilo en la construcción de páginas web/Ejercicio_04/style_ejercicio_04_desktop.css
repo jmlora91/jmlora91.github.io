@@ -1,0 +1,77 @@
+/* 
+    Estilos generales para el cuerpo del documento.
+    Se establece un margen de 0, se define la fuente como Arial y se establece un color de fondo cyan.
+    El texto se alinea al centro.
+*/
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: cyan;
+        text-align: center;
+}
+
+/* 
+    Estilos para el encabezado.
+    Se agrega un relleno de 20px.
+*/
+header {
+        padding: 20px;
+}
+
+/* 
+    Estilos para el contenedor principal.
+    Se utiliza flexbox para centrar el contenido y se establece un espacio de 40px entre los elementos.
+    Se agrega un relleno de 30px.
+*/
+.contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 30px;
+}
+
+/* 
+    Estilos para las columnas.
+    Se establece un ancho de 300px, alineación de texto al centro y un relleno de 20px.
+    El color del texto se establece en negro.
+*/
+.columna {
+        width: 300px;
+        text-align: center;
+        padding: 20px;
+        color: black;
+}
+
+/* 
+    Estilos específicos para la primera columna.
+    Se establece un color de fondo rosa y una altura de 100px.
+*/
+.columna1 {
+        background-color: pink;
+        height: 100px;
+}
+
+/* 
+    Estilos específicos para la segunda columna.
+    Se establece un color de fondo gris, el color del texto en blanco y una altura de 200px.
+*/
+.columna2 {
+        background-color: gray;
+        color: white;
+        height: 200px;
+}
+
+/* 
+    Estilos para el pie de página.
+    Se establece un color de fondo negro, color de texto blanco y un relleno de 10px.
+    El texto se muestra en negrita y se utiliza flexbox para distribuir el contenido.
+*/
+footer {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-around;
+}

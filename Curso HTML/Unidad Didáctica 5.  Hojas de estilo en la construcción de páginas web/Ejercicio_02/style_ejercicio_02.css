@@ -1,0 +1,23 @@
+/* a. Bordes de la tabla y celdas */
+table {
+    border: 3px solid black;
+    border-collapse: collapse;
+  }
+  
+  td {
+    border: 2px solid black;
+    padding: 10px;
+  }
+  
+  /* b. Primera celda de cada fila con clase */
+  .resaltada {
+    color: blue;
+    background-color: yellow;
+  }
+  
+  /* c. Última celda de cada fila usando seudoclase */
+  tr td:last-child {
+    color: red;
+    background-color: lightgray;
+  }
+  

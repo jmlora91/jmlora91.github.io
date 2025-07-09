@@ -1,0 +1,91 @@
+/* 
+    Estilos generales para el cuerpo del documento
+    - Se elimina el margen por defecto
+    - Se establece la fuente a Arial o sans-serif
+    - Se define el color de fondo como blanco
+    - Se centra el texto
+*/
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: white;
+        text-align: center;
+}
+
+/* 
+    Estilos para el encabezado
+    - Se añade un relleno de 20px
+*/
+header {
+        padding: 20px;
+}
+
+/* 
+    Estilos para el contenedor principal
+    - Se establece el contenedor como bloque
+    - Se añade un relleno de 10px
+*/
+.contenedor {
+        display: block;
+        padding: 10px;
+}
+
+/* 
+    Estilos para las columnas
+    - Se establece un ancho del 80%
+    - Se centra la columna con márgenes automáticos
+    - Se añade un relleno de 20px
+    - Se centra el texto
+*/
+.columna {
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        text-align: center;
+}
+
+/* 
+    Estilos específicos para la primera columna
+    - Se establece un color de fondo rosa
+    - Se define una altura de 100px
+*/
+.columna1 {
+        background-color: pink;
+        height: 100px;
+}
+
+/* 
+    Estilos específicos para la segunda columna
+    - Se establece un color de fondo gris
+    - Se define el color del texto como blanco
+    - Se establece una altura de 200px
+*/
+.columna2 {
+        background-color: gray;
+        color: white;
+        height: 200px;
+}
+
+/* 
+    Estilos para el pie de página
+    - Se establece un color de fondo negro
+    - Se define el color del texto como blanco
+    - Se añade un relleno de 10px
+    - Se establece el texto en negrita
+*/
+footer {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+}
+
+/* 
+    Estilos para los elementos span dentro del pie de página
+    - Se establece que cada span se muestre como bloque
+    - Se añade un margen inferior de 5px
+*/
+footer span {
+        display: block;
+        margin-bottom: 5px;
+}

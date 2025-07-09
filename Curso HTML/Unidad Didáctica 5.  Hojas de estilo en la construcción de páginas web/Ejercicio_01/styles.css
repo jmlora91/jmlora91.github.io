@@ -1,0 +1,33 @@
+h1 {
+    font-size: 50px;
+    color: blue;
+    font-family: Verdana;
+  }
+
+  h2 {
+    font-size: 30px;
+    color: red;
+    font-family: Arial;
+  }
+
+  p {
+    font-size: 20px;
+    color: yellow;
+    font-family: Arial;
+    background: black;
+  }
+
+  section {
+    margin-top: 30px;
+  }
+
+  pre {
+    background: #f4f4f4;
+    padding: 10px;
+    overflow-x: auto;
+  }
+
+  body {
+    font-family: sans-serif;
+    margin: 20px;
+  }
